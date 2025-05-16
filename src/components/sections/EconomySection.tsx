@@ -77,7 +77,7 @@ const EconomySection: React.FC = () => {
           <div className={`${styles.itemGrid} ${styles.enhancementGrid}`}>
             <div className={styles.enhancementItem}>
               <Image src="/svg_icons/iron_grip.svg" alt="Iron Grip Fundamentals Icon" width={100} height={100} className={styles.enhancementIcon} />
-              <span className={styles.enhancementName}>Iron Grip</span>
+              <span className={styles.enhancementName}>The Iron Grip</span>
             </div>
             <div className={styles.enhancementItem}>
               <Image src="/svg_icons/chodebot_efficiency_matrix.svg" alt="ChodeBot Efficiency Matrix Icon" width={100} height={100} className={styles.enhancementIcon} />
@@ -85,11 +85,11 @@ const EconomySection: React.FC = () => {
             </div>
             <div className={styles.enhancementItem}>
               <Image src="/svg_icons/girthquake_magnitude.svg" alt="Girthquake Magnitude Icon" width={100} height={100} className={styles.enhancementIcon} />
-              <span className={styles.enhancementName}>Girthquake Mag.</span>
+              <span className={styles.enhancementName}>Girthquake Magnitude</span>
             </div>
             <div className={styles.enhancementItem}>
               <Image src="/svg_icons/oozedrip_concentration.svg" alt="OozeDrip Concentration Icon" width={100} height={100} className={styles.enhancementIcon} />
-              <span className={styles.enhancementName}>OozeDrip Conc.</span>
+              <span className={styles.enhancementName}>OozeDrip Concentrate</span>
             </div>
           </div>
         </div>

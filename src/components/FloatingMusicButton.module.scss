@@ -1,0 +1,63 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+@use 'sass:color';
+
+.floatingButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000; // Ensure it's above most other content
+  background-color: rgba(var(--color-black-void-rgb), 0.85);
+  color: $color-pink-girth;
+  border: 2px solid $color-pink-girth;
+  border-radius: 50px; // Pill shape or round, adjust as desired
+  padding: 0.75rem 1.5rem;
+  font-family: $font-family-accent; // Use our accent font
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 0 10px $color-pink-girth, 0 0 20px $color-cyber-blue-glow;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px); // Frosted glass effect
+
+  &:hover {
+    background-color: rgba(var(--color-pink-girth-rgb), 0.2);
+    color: $color-white-signal;
+    border-color: $color-gold-degen;
+    box-shadow: 0 0 15px $color-gold-degen, 0 0 30px $color-pink-girth-glow;
+    transform: scale(1.05);
+  }
+
+  &.playing {
+    border-color: $color-green-slime;
+    box-shadow: 0 0 10px $color-green-slime, 0 0 20px rgba(var(--color-green-slime-rgb), 0.7);
+
+    &:hover {
+      border-color: $color-white-signal;
+      box-shadow: 0 0 15px $color-white-signal, 0 0 30px $color-green-slime-glow;
+    }
+  }
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // Add dimensions if using SVGs that need specific sizing
+  // width: 24px;
+  // height: 24px;
+}
+
+.playIcon,
+.pauseIcon {
+  font-size: 1.2rem; // Adjust size of simple text icons
+  line-height: 1;
+}
+
+.buttonText {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+} 

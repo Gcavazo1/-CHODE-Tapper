@@ -116,7 +116,7 @@ const HeroSection: React.FC = () => {
     <section 
       id="hero" 
       className={styles.heroSection}
-      style={{ backgroundImage: `url('/images/hero40.jpg')` }} // Setting the hero image as a background
+      style={{ backgroundImage: `url('/images/hero82.jpg')` }} // Setting the hero image as a background
       ref={heroRef}
     >
       <div className={styles.overlay}></div> {/* Optional overlay for text contrast */}

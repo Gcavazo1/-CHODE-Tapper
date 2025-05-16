@@ -27,7 +27,7 @@ const EconomySection: React.FC = () => {
           <div className={`${styles.itemGrid} ${styles.tierGrid}`}>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/humble_sprout03.jpg"
+                src="/models/humble_sprout02.jpg"
                 alt="Tier 1: Humble Sprout"
                 layout="fill"
                 objectFit="cover"
@@ -35,7 +35,7 @@ const EconomySection: React.FC = () => {
             </div>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/veinous_veridian.png"
+                src="/models/veinous_veridian.jpg"
                 alt="Tier 2: Veinous Veridian"
                 layout="fill"
                 objectFit="cover"
@@ -43,25 +43,54 @@ const EconomySection: React.FC = () => {
             </div>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/cracked_core.png"
+                src="/models/cracked_core.jpg"
                 alt="Tier 3: Cracked Core"
                 layout="fill"
                 objectFit="cover"
               />
             </div>
-            <ImagePlaceholder name="Tier 4: Radiant Monolith" type="tier" />
-            <ImagePlaceholder name="Tier 5: Cosmic Chode Prime" type="tier" />
+            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
+              <Image
+                src="/models/radiant_eminence03.jpg"
+                alt="Tier 4: Radiant Eminence"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
+              <Image
+                src="/models/cosmic_chode_prime.jpg"
+                alt="Tier 5: Cosmic Chode Prime"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           </div>
+          <p className={styles.disclaimerText}>
+            (Prompt-generated conceptual art. Visual representations of the glorious evolution of thy member, not final in-game assets.)
+          </p>
         </div>
 
         <div className={styles.category}>
           <h3 className={styles.categoryHeadline}>FINGER WORKOUTS</h3>
           <p className={styles.categoryDescription}>Permanently enhance your tapping power and Degen Power-Up efficiency. More Slaps, More Girth!</p>
           <div className={`${styles.itemGrid} ${styles.enhancementGrid}`}>
-            <ImagePlaceholder name="Iron Grip" type="enhancement" />
-            <ImagePlaceholder name="ChodeBot Matrix" type="enhancement" />
-            <ImagePlaceholder name="Girthquake Mag." type="enhancement" />
-            <ImagePlaceholder name="OozeDrip Conc." type="enhancement" />
+            <div className={styles.enhancementItem}>
+              <Image src="/svg_icons/iron_grip.svg" alt="Iron Grip Fundamentals Icon" width={100} height={100} className={styles.enhancementIcon} />
+              <span className={styles.enhancementName}>Iron Grip</span>
+            </div>
+            <div className={styles.enhancementItem}>
+              <Image src="/svg_icons/chodebot_efficiency_matrix.svg" alt="ChodeBot Efficiency Matrix Icon" width={100} height={100} className={styles.enhancementIcon} />
+              <span className={styles.enhancementName}>ChodeBot Matrix</span>
+            </div>
+            <div className={styles.enhancementItem}>
+              <Image src="/svg_icons/girthquake_magnitude.svg" alt="Girthquake Magnitude Icon" width={100} height={100} className={styles.enhancementIcon} />
+              <span className={styles.enhancementName}>Girthquake Mag.</span>
+            </div>
+            <div className={styles.enhancementItem}>
+              <Image src="/svg_icons/oozedrip_concentration.svg" alt="OozeDrip Concentration Icon" width={100} height={100} className={styles.enhancementIcon} />
+              <span className={styles.enhancementName}>OozeDrip Conc.</span>
+            </div>
           </div>
         </div>
 

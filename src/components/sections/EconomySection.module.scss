@@ -166,6 +166,127 @@
   // Default square aspect ratio is fine
 }
 
+.enhancementItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; 
+  padding: 3.5rem; // Increased padding for a larger container
+  background-color: rgba(var(--color-blue-glitch-rgb), 0.05);
+  border: 2px dashed var(--color-blue-glitch);
+  box-shadow: 0 0 12px 0 rgba($color-pink-girth-glow, 0.5);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative; // Needed for pseudo-element positioning
+  overflow: hidden; // Keep glitch effects contained
+
+  &:hover {
+    border-color: var(--color-gold-degen);
+    background-color: rgba(var(--color-gold-degen-rgb), 0.1);
+    transform: translateY(-5px) scale(1.03); // Added slight scale on hover
+
+    .enhancementName {
+      color: var(--color-gold-degen);
+    }
+  }
+
+  // Glitch Effect
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; // Base, can be overridden by animation
+    opacity: 0;
+    mix-blend-mode: screen; // Experiment with blend modes
+    pointer-events: none; // Ensure they don't interfere with interaction
+    animation: glitchAnim 1.5s infinite steps(1, end) alternate; // Increased duration from 0.5s to 1.5s
+  }
+
+  &::before {
+    background-color: var(--color-pink-girth);
+    animation-delay: 0.1s; // Offset the animation slightly
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%); // Horizontal slice
+  }
+
+  &::after {
+    background-color: var(--color-blue-glitch);
+    animation-delay: 0.2s; // Further offset
+    clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%); // Another horizontal slice
+  }
+}
+
+@keyframes glitchAnim {
+  0% {
+    opacity: 0;
+    transform: translate(2px, 1px) skewX(-5deg);
+    clip-path: polygon(0 0, 100% 0, 100% 5%, 0 5%); // Thin top slice
+  }
+  10% {
+    opacity: 0.3;
+    transform: translate(-2px, -1px) skewX(5deg);
+    clip-path: polygon(0 15%, 100% 15%, 100% 35%, 0 35%); // Mid slice
+  }
+  20% {
+    opacity: 0.05; // Briefly almost invisible
+    transform: translate(0, 0) skewX(0);
+    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%); // Quick thin mid slice
+  }
+  30% {
+    opacity: 0.4;
+    transform: translate(1px, -2px) skewX(-3deg);
+    clip-path: polygon(0 70%, 100% 70%, 100% 90%, 0 90%); // Lower slice
+  }
+  40% {
+    opacity: 0.1;
+    transform: translate(-1px, 2px) skewX(3deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(0, 0) skewX(0); // Reset to show more of the base
+    clip-path: polygon(0 20%, 100% 20%, 100% 60%, 0 60%); // Wider mid band
+  }
+  60% { 
+    opacity: 0.25;
+    transform: translate(2px, 2px) skewX(-2deg);
+  }
+  70% { 
+    opacity: 0.6;
+    clip-path: polygon(0 40%, 100% 40%, 100% 45%, 0 45%); // Shifting thin slice
+  }
+  80% { 
+    opacity: 0.15;
+    transform: translate(-2px, 1px) skewX(2deg);
+  }
+  90% { 
+    opacity: 0.4;
+    clip-path: polygon(0 5%, 100% 5%, 100% 25%, 0 25%); // Another top-ish slice
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) skewX(0);
+  }
+}
+
+.enhancementIcon {
+  width: 120px; // Adjust as needed
+  height: 120px; // Adjust as needed
+  // SVGs might need fill color set here or directly in SVG if not set for current/context color
+  // color: var(--color-green-slime); // Example if icons use currentColor for fill
+  // For direct SVG styling, ensure SVGs are prepared to accept CSS `fill` or `stroke`
+}
+
+.enhancementName {
+  font-family: var(--font-family-accent);
+  font-size: 1.8rem;
+  color: var(--color-blue-glitch); // Matching placeholder name color initially
+  font-weight: bold;
+  text-align: center;
+}
+
 .subCta {
   margin-top: 2rem;
   p {
@@ -173,4 +294,14 @@
     color: $color-blue-glitch;
     font-style: italic;
   }
+}
+
+.disclaimerText {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: color.adjust($color-white-signal, $alpha: -0.4);
+  margin-top: 1.5rem;
+  max-width: 600px; // Keep it from getting too wide
+  margin-left: auto;
+  margin-right: auto;
 } 

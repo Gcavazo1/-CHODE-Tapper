@@ -1,0 +1,226 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use 'sass:color';
+
+.heroSection {
+  min-height: 100vh; // Make hero section take full viewport height
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  position: relative; // Needed for the overlay to position correctly
+  background-size: cover; // Ensure the background image covers the section
+  background-position: center center; // Center the background image
+  background-repeat: no-repeat;
+  color: var(--color-white-signal); // Default text color for hero
+
+  // // Example of a subtle pattern overlay if desired in addition to image
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-image: url('/path-to-your-subtle-pattern.png');
+  //   opacity: 0.1; // Adjust opacity as needed
+  //   z-index: 1;
+  // }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(var(--color-black-void-rgb), 0.40) 20%, // More transparent in the center
+    rgba(var(--color-black-void-rgb), 0.65) 40%, // Transitioning to darker
+    rgba(var(--color-black-void-rgb), 0.99) 85% // Darkest at the edges
+  );
+  z-index: 1; // Ensure overlay is above background image but below content
+}
+
+.heroContent {
+  position: relative; // Ensure content is above the overlay
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md); // Add some gap between hero content elements
+}
+
+.mainHeadline {
+  font-size: clamp(2.5rem, 8vw, 9.5rem); // Responsive font size
+  font-family: var(--font-family-headline);
+  color: var(--color-white-signal); // Base color, spans will override
+  margin-bottom: 0;
+
+  .massiveGirth {
+    display: block; 
+    color: var(--color-pink-girth);
+  }
+  .imminent {
+    display: block; 
+    color: var(--color-green-slime);
+  }
+}
+
+.gameTitle {
+  font-family: var(--font-family-headline);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  color: var(--color-white-signal-alpha-80);
+  text-shadow: 
+    1px 1px 3px rgba(var(--color-black-void-rgb), 0.6), // Existing dark shadow for depth
+    0 0 12px rgba(var(--color-blue-glitch-rgb), 0.9); // Subtle blue electric hum/glow
+  margin-top: var(--space-xs); 
+  margin-bottom: var(--space-sm);
+
+  .chodeTapper {
+    // color: var(--color-blue-glitch); // Example distinct color
+  }
+  .girthToEarn {
+    // color: var(--color-gold-degen); // Example distinct color
+  }
+}
+
+.subtitle {
+  font-family: var(--font-family-accent); // Using accent font for subtitle (JakustyOutline.otf via GlitchSlap variable)
+  font-size: clamp(1.25rem, 4vw, 2.25rem); // Adjusted size for impact
+  color: var(--color-white-signal);
+  text-shadow: 
+    0 0 7px rgba(var(--color-white-signal-rgb), 0.5),
+    0 0 12px rgba(var(--color-blue-glitch-rgb), 0.95), // Adding a blue glitchy aura
+    1px 1px 2px rgba(var(--color-black-void-rgb), 0.5); // Standard depth shadow
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+// Changed from .ctaButtons to .ctaContainer for better clarity of purpose
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 600px; // Prevent it from getting too wide
+  margin-top: var(--space-lg); // Additional spacing from the content above
+}
+
+.emailFormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-sm);
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+.emailInput {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-grey-grime);
+  background-color: rgba(var(--color-black-void-rgb), 0.7);
+  color: var(--color-white-signal);
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s ease;
+  border-radius: var(--border-radius-sm);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-pink-girth);
+  }
+
+  @media (min-width: 640px) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.btnWaitsList {
+  background-color: var(--color-pink-girth);
+  color: var(--color-black-void);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--border-radius-sm);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--color-pink-girth-rgb), 0.5);
+  }
+
+  @media (min-width: 640px) {
+    width: auto;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.btnFollow {
+  // Base styles for the follow button, if different from general .btnSecondary
+  // For the gold gradient text:
+  background-image: linear-gradient(120deg, var(--color-gold-degen) 0%, var(--color-pink-girth) 100%); // Gold to Pink Girth gradient
+  background-clip: text;
+  -webkit-background-clip: text; // For Safari
+  color: transparent;
+  border: 2px solid var(--color-gold-degen); // Gold border to complement
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  display: inline-flex; // To align icon and text
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm); // Add space between email form and follow button
+
+  &:hover {
+    border-color: var(--color-pink-girth); // Border changes to pink on hover
+    transform: scale(1.05); // Slight scale on hover
+    .followIcon {
+      transform: rotate(360deg); // Rotate icon on button hover
+    }
+  }
+}
+
+.followIcon {
+  width: 40px; // Adjust size as needed
+  height: 40px;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); // Funky rotation transition
+}
+
+.submissionMessage {
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+
+  // Default styling (can be adjusted based on success/error)
+  background-color: rgba(var(--color-blue-glitch-rgb), 0.15);
+  color: var(--color-blue-glitch);
+  border: 1px solid var(--color-blue-glitch);
+
+  // Potentially add modifier classes for success/error if desired
+  // e.g., .submissionMessageSuccess, .submissionMessageError
+}
+
+.smallText {
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+  color: color.adjust($color-white-signal, $alpha: -0.3); // using sass:color
+  font-style: italic;
+}
+
+.openingHook, .coreConcept {
+  max-width: 800px; // Keep text from stretching too wide
+  margin-left: auto;
+  margin-right: auto;
+} 

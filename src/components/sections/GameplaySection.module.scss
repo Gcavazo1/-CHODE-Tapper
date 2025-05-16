@@ -1,0 +1,42 @@
+.powerUpsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.powerUp {
+  background-color: rgba(var(--color-grey-grime-rgb), 0.5);
+  padding: var(--space-md);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-pink-girth);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(var(--color-pink-girth-rgb), 0.3);
+  }
+
+  h4 {
+    color: var(--color-green-slime);
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-xs);
+  }
+
+  p {
+    font-size: var(--font-size-sm);
+    color: var(--color-white-signal-alpha-80);
+  }
+}
+
+.powerUpIcon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-sm);
+}
+
+.hint {
+  font-style: italic;
+} 

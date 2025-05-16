@@ -1,0 +1,53 @@
+$color-black-void: #0A0A0A;
+$color-grey-grime: #333333;
+$color-white-signal: #FFFFFF;
+
+$color-pink-girth: #FF00FF;
+$color-green-slime: #00FF00;
+$color-gold-degen: #FFD700;
+
+$color-blue-glitch: #00FFFF;
+$color-red-warning: #FF4500;
+
+// NEW & UPDATED Colors from ManifestoViewer requirements
+$color-background-dark: $color-black-void; // Alias for existing black
+$color-text-primary: $color-white-signal; // Alias for existing white
+$color-text-secondary: rgba($color-white-signal, 0.7); // Slightly dimmer white for secondary text
+
+$color-cyber-blue: #00BFFF; // Deep Sky Blue - a good base for cyber blue
+$color-cyber-blue-glow: #00FFFF; // Aqua/Cyan - for the glow effect, matches existing $color-blue-glitch
+
+$color-pink-girth-glow: #FF69B4; // Hot Pink - for a brighter glow
+
+$color-accent-neon: $color-green-slime; // Use existing slime green as a primary neon accent
+$color-accent-neon-glow: #39FF14; // A slightly different, brighter green for the glow
+
+$color-yellow-caution: #FFFF00; // Bright Yellow
+$color-yellow-caution-glow: #FFEE81; // Lighter Yellow for glow
+
+$color-teal-glitch: #008080; // Teal
+
+$color-grey-subtle: darken($color-grey-grime, 10%); // A slightly darker version of grime for subtlety
+
+$color-red-alert: $color-red-warning; // Alias for existing red
+$color-red-alert-glow: #FF8C00; // DarkOrange for a fiery glow
+
+// Alpha variants (ensure your CSS custom properties in global.scss for RGB are set up if using these extensively with rgba())
+$color-white-signal-alpha-80: rgba(255, 255, 255, 0.8);
+$color-white-signal-alpha-70: rgba(255, 255, 255, 0.7);
+
+// Font Families (matching CSS Custom Properties in global.scss for SCSS-specific use if needed)
+$font-family-main: 'NeueMetanaBold', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-headline: 'GlitchSlap', 'OffBitDotBold', $font-family-main; // SCSS variable fallback
+$font-family-accent: 'OffBitDotBold', $font-family-main; // SCSS variable fallback
+
+// NEW Font Family Variables from ManifestoViewer
+$font-family-headings: $font-family-headline; // Alias to existing headline
+$font-family-code: 'GeistMono', monospace; // Assuming GeistMono is available or will be added
+$font-family-pixel: 'OffBitDotBold', $font-family-main; // Using OffBitDotBold for pixelated text
+
+// Spacing variables (consider defining these in :root as well for consistency if used in inline styles or JS)
+$space-xs: 0.25rem;  // 4px
+$space-sm: 0.5rem;   // 8px
+
+// ... existing code ... 

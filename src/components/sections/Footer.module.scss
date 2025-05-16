@@ -1,0 +1,75 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use 'sass:color';
+
+.footer {
+  padding: 2rem 0;
+  background-color: rgba($color-black-void, 0.95);
+  color: $color-white-signal;
+  border-top: 1px solid color.adjust($color-blue-glitch, $alpha: -0.7);
+  position: relative;
+  
+  // Optional: Subtle glowing border
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      rgba($color-blue-glitch, 0),
+      rgba($color-blue-glitch, 0.5),
+      rgba($color-blue-glitch, 0)
+    );
+    box-shadow: 0 0 8px rgba($color-blue-glitch, 0.6);
+  }
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footerLinks {
+  margin-bottom: 1rem;
+}
+
+.litepaper {
+  color: $color-gold-degen;
+  background-image: linear-gradient(120deg, $color-gold-degen 0%, color.adjust($color-gold-degen, $lightness: 10%) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid color.adjust($color-gold-degen, $alpha: -0.5);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: $color-gold-degen;
+    box-shadow: 0 0 10px rgba($color-gold-degen, 0.3);
+    transform: translateY(-2px);
+  }
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: color.adjust($color-white-signal, $alpha: -0.4);
+  
+  p {
+    margin: 0.25rem 0;
+  }
+}
+
+.degenCreed {
+  font-style: italic;
+  margin-top: 0.5rem !important;
+  color: color.adjust($color-pink-girth, $alpha: -0.5);
+} 

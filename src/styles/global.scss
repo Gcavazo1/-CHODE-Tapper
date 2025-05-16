@@ -1,0 +1,148 @@
+// src/styles/global.scss
+@use 'variables' as vars; // Using a namespace for clarity, or use '*' for direct access
+
+// Reset basic browser styles (example)
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Commenting out Geist font imports as we are introducing new custom fonts
+/*
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Regular.woff2') format('woff2'),
+       url('/fonts/Geist-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/fonts/GeistMono-Regular.woff2') format('woff2'),
+       url('/fonts/GeistMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+// New Custom Font Declarations
+@font-face {
+  font-family: 'GlitchSlap';
+  src: url('/fonts/OffBitDotBold.ttf') format('truetype');
+  font-weight: normal; // Assuming regular weight, adjust if needed
+  font-style: normal;  // Assuming normal style, adjust if needed
+  font-display: swap; // Improves perceived performance
+}
+
+@font-face {
+  font-family: 'OffBitDotBold';
+  src: url('/fonts/JakustyOutline.otf') format('truetype');
+  font-weight: bold;   // Assuming bold weight from filename, adjust if needed
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueMetanaBold';
+  src: url('/fonts/GlitchSlap.ttf') format('truetype');
+  font-weight: bold;   // Assuming bold weight, adjust if needed
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  // Base Colors (Hex) - These are now the single source of truth for CSS variables
+  --color-black-void: #{vars.$color-black-void}; // Referencing SCSS vars from _variables.scss
+  --color-grey-grime: #{vars.$color-grey-grime};
+  --color-white-signal: #{vars.$color-white-signal};
+  --color-pink-girth: #{vars.$color-pink-girth};
+  --color-green-slime: #{vars.$color-green-slime};
+  --color-gold-degen: #{vars.$color-gold-degen};
+  --color-blue-glitch: #{vars.$color-blue-glitch};
+  --color-red-warning: #{vars.$color-red-warning};
+
+  // NEW CSS Custom Properties from ManifestoViewer requirements
+  --color-background-dark: #{vars.$color-background-dark};
+  --color-text-primary: #{vars.$color-text-primary};
+  --color-text-secondary: #{vars.$color-text-secondary};
+  --color-cyber-blue: #{vars.$color-cyber-blue};
+  --color-cyber-blue-glow: #{vars.$color-cyber-blue-glow};
+  --color-pink-girth-glow: #{vars.$color-pink-girth-glow};
+  --color-accent-neon: #{vars.$color-accent-neon};
+  --color-accent-neon-glow: #{vars.$color-accent-neon-glow};
+  --color-yellow-caution: #{vars.$color-yellow-caution};
+  --color-yellow-caution-glow: #{vars.$color-yellow-caution-glow};
+  --color-teal-glitch: #{vars.$color-teal-glitch};
+  --color-grey-subtle: #{vars.$color-grey-subtle};
+  --color-red-alert: #{vars.$color-red-alert};
+  --color-red-alert-glow: #{vars.$color-red-alert-glow};
+
+  // RGB versions for use in rgba() - these can be derived or kept if preferred for direct use
+  --color-black-void-rgb: 10, 10, 10;
+  --color-grey-grime-rgb: 51, 51, 51;
+  --color-white-signal-rgb: 255, 255, 255;
+  --color-pink-girth-rgb: 255, 0, 255;
+  --color-green-slime-rgb: 0, 255, 0;
+  --color-gold-degen-rgb: 255, 215, 0;
+  --color-blue-glitch-rgb: 0, 255, 255;
+  --color-red-warning-rgb: 255, 69, 0;
+
+  // Spacing Units
+  --space-xs: #{vars.$space-xs}; // Referencing SCSS vars from _variables.scss
+  --space-sm: #{vars.$space-sm};
+  --space-md: 1rem; // Can keep direct values or also pull from _variables.scss
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-xxl: 4rem;
+
+  // Border Radius
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+
+  // Font Sizes
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-xxl: 1.5rem;
+  --font-size-hero: clamp(2.5rem, 8vw, 5.5rem);
+
+  // Font Families - using SCSS variables from _variables.scss via 'vars' namespace
+  --font-family-main: #{vars.$font-family-main};
+  --font-family-headline: #{vars.$font-family-headline};
+  --font-family-accent: #{vars.$font-family-accent};
+
+  // NEW Font Family CSS Custom Properties
+  --font-family-headings: #{vars.$font-family-headings};
+  --font-family-code: #{vars.$font-family-code};
+  --font-family-pixel: #{vars.$font-family-pixel};
+}
+
+body {
+  font-family: var(--font-family-main);
+  background-color: var(--color-black-void);
+  color: var(--color-white-signal);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+// ... (rest of global styles like h1-h6, a, btn, container etc.)
+
+/* Base heading styles - can be overridden per section */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-headline); // Apply headline font by default to headings
+  color: var(--color-pink-girth); // Example default heading color
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+// ... (rest of global styles) 

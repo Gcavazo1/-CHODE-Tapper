@@ -1,0 +1,166 @@
+@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as mixins;
+@use 'sass:color';
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  background-color: vars.$color-background-dark;
+  border: 2px solid vars.$color-cyber-blue-glow;
+  box-shadow: 0 0 20px vars.$color-cyber-blue-glow, 0 0 30px vars.$color-pink-girth-glow;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  height: 80vh;
+  overflow-y: auto;
+  color: vars.$color-text-primary; // Pure Signal White
+  font-family: vars.$font-family-main;
+  position: relative;
+
+  // Custom scrollbar for the "sacred scroll" feel
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: darken(vars.$color-background-dark, 5%);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: vars.$color-cyber-blue;
+    border-radius: 10px;
+    border: 2px solid vars.$color-background-dark;
+    &:hover {
+      background-color: vars.$color-cyber-blue-glow;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: vars.$color-pink-girth;
+    text-shadow: 0 0 5px vars.$color-pink-girth-glow, 0 0 10px vars.$color-pink-girth-glow;
+    margin-bottom: 0.75em;
+    font-family: vars.$font-family-headings; // GlitchSlap or NeueMetana
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: vars.$color-accent-neon; // Main accent neon for the grand title
+    text-shadow: 0 0 8px vars.$color-accent-neon-glow, 0 0 15px vars.$color-accent-neon-glow;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    border-bottom: 1px solid color.adjust(vars.$color-pink-girth, $alpha: -0.5);
+    padding-bottom: 0.3em;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    color: vars.$color-cyber-blue;
+    text-shadow: 0 0 5px vars.$color-cyber-blue-glow, 0 0 10px vars.$color-cyber-blue-glow;
+  }
+
+  p, li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1em;
+    color: vars.$color-text-primary; // Ensuring Pure Signal White
+    // Potentially add a very subtle glow to the text if desired
+    // text-shadow: 0 0 1px rgba(255, 255, 255, 0.1); 
+  }
+
+  ul, ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+  }
+
+  strong {
+    color: vars.$color-yellow-caution;
+    font-weight: bold;
+    text-shadow: 0 0 3px vars.$color-yellow-caution-glow;
+  }
+
+  em {
+    color: vars.$color-teal-glitch;
+    font-style: italic;
+  }
+
+  a {
+    color: vars.$color-accent-neon;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-shadow: 0 0 5px vars.$color-accent-neon-glow;
+    }
+  }
+
+  pre, code {
+    background-color: color.adjust(vars.$color-background-dark, $lightness: 5%);
+    border: 1px solid vars.$color-grey-subtle;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: vars.$font-family-code;
+    font-size: 0.95em;
+    color: vars.$color-text-secondary;
+  }
+  
+  pre {
+    padding: 1em;
+    overflow-x: auto;
+  }
+
+  blockquote {
+    border-left: 3px solid vars.$color-pink-girth;
+    margin-left: 0;
+    padding-left: 1.5em;
+    font-style: italic;
+    color: color.adjust(vars.$color-text-primary, $alpha: -0.3);
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(vars.$color-cyber-blue, 0), rgba(vars.$color-cyber-blue, 0.75), rgba(vars.$color-cyber-blue, 0));
+    margin: 2em 0;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid vars.$color-red-alert;
+  color: vars.$color-red-alert;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: vars.$font-family-pixel; // OffBitDotBold for that chunky pixel feel
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 5px vars.$color-red-alert-glow;
+
+  &:hover {
+    background-color: vars.$color-red-alert;
+    color: vars.$color-background-dark;
+    box-shadow: 0 0 10px vars.$color-red-alert-glow, 0 0 15px vars.$color-red-alert-glow;
+    transform: scale(1.1);
+  }
+} 

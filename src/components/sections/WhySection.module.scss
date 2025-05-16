@@ -1,0 +1,77 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use 'sass:color';
+
+.whySection {
+  padding: 4rem 2rem;
+  background-color: color.adjust($color-black-void, $alpha: -0.05); // Use sass:color
+  text-align: center;
+  color: var(--color-white-signal);
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: $color-green-slime;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.copy {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  color: color.adjust($color-white-signal, $alpha: -0.2); // Use sass:color
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Two columns on larger screens
+    gap: 2rem;
+  }
+
+  li {
+    background-color: $color-grey-grime; // Darker card background
+    padding: 1.5rem;
+    border-left: 5px solid $color-pink-girth;
+    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px color.adjust($color-pink-girth, $alpha: -0.7); // Use sass:color for rgba equivalent
+    }
+  }
+}
+
+.featureStrong {
+  display: block;
+  font-size: 1.2em;
+  color: $color-pink-girth;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.subCta {
+  p {
+    font-size: 1.2rem;
+    color: $color-blue-glitch;
+    margin-bottom: 1rem;
+  }
+  // Optional: Add button styles if we uncomment the button in JSX
+  // .button { ... }
+  // .buttonPrimary { ... }
+} 

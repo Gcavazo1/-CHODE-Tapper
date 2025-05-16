@@ -1,0 +1,176 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use 'sass:color';
+
+.economySection {
+  padding: 4rem 2rem;
+  background-color: color.adjust($color-black-void, $alpha: -0.1); // Example using color.adjust for transparency
+  color: var(--color-white-signal);
+  text-align: center;
+}
+
+.content {
+  max-width: 1100px; // Wider for more content
+  margin: 0 auto;
+}
+
+.mainHeadline {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: $color-pink-girth; // Pink for this section's main title
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.introCopy {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  color: color.adjust($color-white-signal, $alpha: -0.15); // Example using color.adjust
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category {
+  margin-bottom: 3.5rem;
+}
+
+.categoryHeadline {
+  font-size: 2rem;
+  color: $color-green-slime;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid $color-green-slime;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.categoryDescription {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: color.adjust($color-white-signal, $alpha: -0.25); // Example using color.adjust
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.itemGrid {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center; // Center items within grid cells
+}
+
+// Specific grid layouts
+.tierGrid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.enhancementGrid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.themeGrid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skinGrid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: rgba($color-blue-glitch, 0.05); // Faint blue holo background
+  color: $color-blue-glitch;
+  display: flex;
+  flex-direction: column; // To stack name and "Coming Soon"
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px dashed $color-blue-glitch;
+  padding: 1rem; // Increased padding
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  position: relative; // For pseudo-elements if needed for scanlines
+  overflow: hidden; // For scanlines or other effects
+
+  &::before { // Subtle grid/scanline effect
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba($color-blue-glitch, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba($color-blue-glitch, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px; // Adjust grid size
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .placeholderName,
+  .comingSoonText {
+    position: relative; // Ensure text is above the pseudo-element
+    z-index: 1;
+  }
+
+  .placeholderName {
+    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+  }
+
+  .comingSoonText {
+    font-size: 0.8em;
+    font-style: italic;
+    color: color.adjust($color-blue-glitch, $lightness: 15%);
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    border-color: $color-gold-degen;
+    background-color: rgba($color-gold-degen, 0.1);
+    color: $color-gold-degen;
+
+    .comingSoonText {
+      color: color.adjust($color-gold-degen, $lightness: 10%);
+    }
+    &::before {
+       background-image: linear-gradient(rgba($color-gold-degen, 0.15) 1px, transparent 1px),
+                         linear-gradient(90deg, rgba($color-gold-degen, 0.15) 1px, transparent 1px);
+    }
+  }
+}
+
+.tierPlaceholder {
+  aspect-ratio: 3 / 4; // More rectangular for tier previews
+  font-size: 1.1rem;
+}
+
+.itemPlaceholder { // Generic for enhancements, themes, skins unless overridden
+  // Default square aspect ratio is fine
+}
+
+.subCta {
+  margin-top: 2rem;
+  p {
+    font-size: 1.2rem;
+    color: $color-blue-glitch;
+    font-style: italic;
+  }
+} 

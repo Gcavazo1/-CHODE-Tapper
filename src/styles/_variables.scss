@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $color-black-void: #0A0A0A;
 $color-grey-grime: #333333;
 $color-white-signal: #FFFFFF;
@@ -27,7 +29,7 @@ $color-yellow-caution-glow: #FFEE81; // Lighter Yellow for glow
 
 $color-teal-glitch: #008080; // Teal
 
-$color-grey-subtle: darken($color-grey-grime, 10%); // A slightly darker version of grime for subtlety
+$color-grey-subtle: color.adjust($color-grey-grime, $lightness: -10%); // A slightly darker version of grime for subtlety
 
 $color-red-alert: $color-red-warning; // Alias for existing red
 $color-red-alert-glow: #FF8C00; // DarkOrange for a fiery glow

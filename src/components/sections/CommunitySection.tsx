@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './CommunitySection.module.scss';
 
 const CommunitySection: React.FC = () => {
@@ -23,15 +24,15 @@ const CommunitySection: React.FC = () => {
 
         <div className={styles.ctaButtons}>
           <a href="https://x.com/GigaCode_Dev" target="_blank" rel="noopener noreferrer" className={`btn ${styles.btnIcon}`}> 
-            <img src="/svg_icons/twitter_X.svg" alt="Follow on X/Twitter" className={styles.socialIcon} />
+            <Image src="/svg_icons/twitter_X.svg" alt="Follow on X/Twitter" className={styles.socialIcon} width={24} height={24} />
             Follow on X/Twitter
           </a>
           <a href="#" target="_blank" rel="noopener noreferrer" className={`btn ${styles.btnIcon}`}>
-            <img src="/svg_icons/messenger.svg" alt="Join the Discord" className={styles.socialIcon} /> 
+            <Image src="/svg_icons/messenger.svg" alt="Join the Discord" className={styles.socialIcon} width={24} height={24} /> 
             Join the Discord
           </a>
           <a href="https://www.instagram.com/gigacode_dev/" target="_blank" rel="noopener noreferrer" className={`btn ${styles.btnIcon}`}>
-            <img src="/svg_icons/instagram.svg" alt="Follow on Instagram" className={styles.socialIcon} /> 
+            <Image src="/svg_icons/instagram.svg" alt="Follow on Instagram" className={styles.socialIcon} width={24} height={24} /> 
             Follow on Instagram
           </a>
         </div>

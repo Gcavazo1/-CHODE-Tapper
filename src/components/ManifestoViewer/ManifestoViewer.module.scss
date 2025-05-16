@@ -36,7 +36,7 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: darken(vars.$color-background-dark, 5%);
+    background: color.adjust(vars.$color-background-dark, $lightness: -5%);
     border-radius: 10px;
   }
 

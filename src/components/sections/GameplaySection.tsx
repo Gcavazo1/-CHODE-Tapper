@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './GameplaySection.module.scss';
 
 const GameplaySection: React.FC = () => {
@@ -31,22 +32,22 @@ const GameplaySection: React.FC = () => {
         
         <div className={styles.powerUpsGrid}>
           <div className={styles.powerUp}>
-            <img src="/svg_icons/chodebot.svg" alt="ChodeBot" className={styles.powerUpIcon} />
+            <Image src="/svg_icons/chodebot.svg" alt="ChodeBot" className={styles.powerUpIcon} width={48} height={48} />
             <h4>CHODEBOT</h4>
             <p>Your tireless auto-tapping minion.</p>
           </div>
           <div className={styles.powerUp}>
-            <img src="/svg_icons/girthquakes.svg" alt="Girthquake" className={styles.powerUpIcon} />
+            <Image src="/svg_icons/girthquakes.svg" alt="Girthquake" className={styles.powerUpIcon} width={48} height={48} />
             <h4>GIRTHQUAKE</h4>
             <p>Multiply your gains with a seismic shockwave.</p>
           </div>
           <div className={styles.powerUp}>
-            <img src="/svg_icons/oozedrip.svg" alt="OozeDrip" className={styles.powerUpIcon} />
+            <Image src="/svg_icons/oozedrip.svg" alt="OozeDrip" className={styles.powerUpIcon} width={48} height={48} />
             <h4>OOZEDRIP</h4>
             <p>Passive $GIRTH income, even when you&apos;re AFK.</p>
           </div>
           <div className={styles.powerUp}>
-            <img src="/svg_icons/combo_rush.svg" alt="Combo Rush" className={styles.powerUpIcon} />
+            <Image src="/svg_icons/combo_rush.svg" alt="Combo Rush" className={styles.powerUpIcon} width={48} height={48} />
             <h4>COMBO RUSH</h4>
             <p>Maintain the rhythm for explosive tap multipliers.</p>
           </div>

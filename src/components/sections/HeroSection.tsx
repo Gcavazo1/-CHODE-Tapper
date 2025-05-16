@@ -1,6 +1,7 @@
 'use client'; // Directive to mark this as a Client Component
 
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import styles from './HeroSection.module.scss';
 import gsap from 'gsap';
 // import IconPlaceholder from '@/components/IconPlaceholder/IconPlaceholder'; // Assuming no icons needed directly in Hero for now
@@ -162,7 +163,7 @@ const HeroSection: React.FC = () => {
           </form>
           {message && <p className={styles.submissionMessage}>{message}</p>}
           <a href="https://x.com/GigaCode_Dev" target="_blank" rel="noopener noreferrer" className={`btn ${styles.btnSecondary} ${styles.btnFollow}`}>
-            <img src="/svg_icons/twitter_X.svg" alt="Twitter X" className={styles.followIcon} /> 
+            <Image src="/svg_icons/twitter_X.svg" alt="Twitter X" className={styles.followIcon} width={24} height={24} /> 
             FOLLOW THE GIGACHODE (X/Twitter)
           </a>
           <p className={styles.smallText}>The prophecy is unfolding. Don&apos;t get left behind.</p>

@@ -7,7 +7,7 @@ const WhySection: React.FC = () => {
       <div className={styles.content}>
         <h2 className={styles.headline}>THE MEME-SHAPED HOLE IN YOUR PORTFOLIO (AND SOUL).</h2>
         <p className={styles.copy}>
-          Let's be real. The crypto-verse is too damn serious. We came for the parabolic gains and stayed for the... waiting? 
+          Let&apos;s be real. The crypto-verse is too damn serious. We came for the parabolic gains and stayed for the... waiting? 
           $CHODE Tapper is the antidote.
         </p>
         <ul className={styles.featuresList}>
@@ -21,7 +21,7 @@ const WhySection: React.FC = () => {
             <strong className={styles.featureStrong}>VISUALLY STIMULATING:</strong> Cyberpunk Dumpster Fire Chic – neon, glitches, escalating rewards.
           </li>
           <li>
-            <strong className={styles.featureStrong}>WEB3 ENHANCED (OPTIONAL):</strong> Blockchain adds true ownership & bragging rights, but isn't required to have fun.
+            <strong className={styles.featureStrong}>WEB3 ENHANCED (OPTIONAL):</strong> Blockchain adds true ownership & bragging rights, but isn&apos;t required to have fun.
           </li>
         </ul>
         <div className={styles.subCta}>

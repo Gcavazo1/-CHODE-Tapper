@@ -27,7 +27,7 @@ const CommunitySection: React.FC = () => {
             <Image src="/svg_icons/twitter_X.svg" alt="Follow on X/Twitter" className={styles.socialIcon} width={24} height={24} />
             Follow on X/Twitter
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className={`btn ${styles.btnIcon}`}>
+          <a href="https://discord.gg/eVyF8Qsj" target="_blank" rel="noopener noreferrer" className={`btn ${styles.btnIcon}`}>
             <Image src="/svg_icons/messenger.svg" alt="Join the Discord" className={styles.socialIcon} width={24} height={24} /> 
             Join the Discord
           </a>

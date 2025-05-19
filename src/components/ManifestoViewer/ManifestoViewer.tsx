@@ -4,6 +4,7 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import ReactMarkdown from 'react-markdown';
 import type { Components } from 'react-markdown';
 import styles from './ManifestoViewer.module.scss';
+import ManifestoAudioPlayer from '../ManifestoAudioPlayer';
 
 interface ManifestoViewerProps {
   isOpen: boolean;
@@ -130,6 +131,7 @@ const ManifestoViewer: React.FC<ManifestoViewerProps> = ({ isOpen, onClose, mani
       <div className={styles.modalContainer} onClick={(e) => e.stopPropagation()}>
         <div className={styles.volumeNavigation}>
           <h3 className={styles.navTitle}>The Sacred Scrolls</h3>
+          <ManifestoAudioPlayer className={styles.audioPlayer} />
           <ul className={styles.volumeList}>
             {volumeNavItems.map((volume) => (
               <li key={volume.id}>

@@ -99,6 +99,12 @@
   border-bottom: 1px solid color.adjust(vars.$color-cyber-blue, $alpha: -0.7);
 }
 
+.audioPlayer {
+  margin: 0 15px 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid color.adjust(vars.$color-cyber-blue, $alpha: -0.7);
+}
+
 .volumeList {
   list-style: none;
   padding: 0;
@@ -300,15 +306,35 @@
   }
   
   .volumeNavigation {
-    display: none; // Hide the navigation on mobile
+    display: block; // Change to show navigation on mobile but styled differently
+    width: 100%;
+    height: auto;
+    padding: 15px 0 0;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid vars.$color-cyber-blue-glow;
+    border-bottom: none;
+    overflow: visible;
+    box-shadow: none;
+    box-sizing: border-box;
+
+    .navTitle, .volumeList {
+      display: none; // Hide these items on mobile
+    }
+
+    .audioPlayer {
+      margin: 0 15px 15px;
+      padding-bottom: 10px;
+      border-bottom: none;
+    }
   }
   
   .modalContent {
     width: 100%; // Take full width
-    height: 100%;
-    border-radius: 10px; // Make all corners rounded
+    height: calc(90vh - 80px); // Account for the audio player height
+    border-radius: 0 0 10px 10px; // Round only bottom corners
     padding: 20px 15px;
     border: 2px solid vars.$color-cyber-blue-glow;
+    border-top: none;
     position: relative;
     
     // Match the WebInterfaceViewer mobile styling

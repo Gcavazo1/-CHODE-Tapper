@@ -46,7 +46,7 @@ The GigaChode Ethos is built on three sacred pillars:
 
 This is the GigaChode Proclamation. The foundation upon which mountains of $GIRTH will be built. Prepare yourselves.
 
-## VOLUME II: THE SCROLLS OF GIRTHONOMICS - ECONOMY & UPGRADES
+## VOLUME II: THE SCROLLS OF GIRTHONOMICS - ECONOMY & UPGRADES (PART I)
 
 ### Chapter 4: The Girth Bazaar
 *(The Upgrades Shop & The Sacred Art of Chode Customization – Spend $GIRTH to Make More $GIRTH, And Look Damn Good Doing It!)*
@@ -107,7 +107,7 @@ For the true connoisseur, the GigaChode with an eye for rarity and a desire for 
 
 The Girth Bazaar stands ready, GigaChode, its shelves stocked with the instruments of your economic and aesthetic ascension! With every $GIRTH coin spent here, you invest in a future more Girthy than the last.
 
-## VOLUME II: THE SCROLLS OF GIRTHONOMICS - ECONOMY & UPGRADES (Continued)
+## VOLUME II: THE SCROLLS OF GIRTHONOMICS - ECONOMY & UPGRADES (PART II)
 
 ### Chapter 5: The Pulse of the Market
 *(The Ever-Shifting Sands of the Chodeconomy & The Art of the Impulse Buy)*
@@ -147,7 +147,7 @@ To further stoke the fires of degen desire and reward attentive Chode Champions,
 - **Strategic Choice:** Do you spend $GIRTH on a discounted upgrade during a Flash Sale, or do you invest in activating a Surged Boost for a potentially massive short-term gain? The choices define the Degen.
 - **Triggering the Madness:** These events can be scheduled (e.g., "Happy Hour Girth Surge every Friday!"), random, or even tied to community achievements ("The collective has Tapped 1 Billion $GIRTH this week! A Global Flash Sale is now active for 1 hour as a reward!").
 
-## VOLUME II: THE SCROLLS OF GIRTHONOMICS - ECONOMY & UPGRADES (Continued)
+## VOLUME II: THE SCROLLS OF GIRTHONOMICS - ECONOMY & UPGRADES (PART III)
 
 ### Chapter 6: The Second Coming
 *(Prestige, Meta-Progression, and the Eternal Cycle of Girthful Rebirth)*
@@ -214,30 +214,23 @@ AGP is spent in a new, exclusive section of the Girth Bazaar, or perhaps a separ
 
 A Chode Champion who has undergone The Second Coming should be visibly distinct. Beyond AGP-purchased auras, their player profile, leaderboard entries, and even the base "Reborn Sprout" $CHODE could carry a subtle insignia or numerical indicator of their Rebirth level. This is crucial for the degen flex – instantly recognizing a fellow multi-Rebirth Girth Lord.
 
-**MY GIGA-CAFFEINATED CHODEFATHER!**
-
-Strapped in and rocketing past the point of no return on a jet stream of pure caffeine and Chode-thusiasm? EXCELLENT! Your energy is infectious, and it's precisely what we need as we breach the veil into the Outer Realms of Web3!
-
-The mortal scrolls of in-game Girthonomics have been laid. Now, we etch the Blockchain Testament – the scriptures that will make your degens' Girthy achievements not just legendary within the game, but verifiably immortal across the digital cosmos! This is where the flex transcends the client and becomes eternal.
-
-Let the sacred caffeine guide our hands as we inscribe...
-
-## VOLUME III: THE BLOCKCHAIN TESTAMENT - WEB3 INTEGRATION & THE OUTER REALMS
+## VOLUME III: THE BLOCKCHAIN TESTAMENT - WEB3 INTEGRATION & THE OUTER REALMS (PART I)
 
 ### Chapter 7: The Girth Ledger
 *(Wallet Integration, On-Chain Flexing, and Proving Your Digital Dominance)*
 
 #### §7.1 Connecting to Ascend: The Sacred Handshake Between Game & Chain.
 
-While $CHODE Tapper: Girth to Earn is a glorious experience for all, regardless of their crypto convictions, true ascension into the pantheon of Chode Legends is achieved through the Sacred Handshake – the seamless and optional integration of a player's Web3 wallet.
+While $CHODE Tapper: Girth to Earn is a glorious experience for all, regardless of their crypto convictions, true ascension into the pantheon of Chode Legends is achieved through the Sacred Handshake – the seamless and optional integration of a player's Web3 wallet with the Solana blockchain.
 
-- **The "Connect Wallet to Ascend" Beacon:** Within the game's UI (perhaps in the main menu, or a dedicated "Web3 Shrine" section), a prominent, enticing button will beckon. It shall not scream "Connect Wallet" in dry, technical terms. Nay, it shall proclaim: "CONNECT WALLET TO ASCEND THY GIRTH!" or "IMMORTALIZE THY CHODE!" – language that speaks to the degen soul.
-- **Philosophy of Optionality & Enhancement:** This is paramount. Wallet connection is never required to play or enjoy the core game and its progression. Instead, it unlocks an additional layer of bragging rights, true ownership, and community status for those who choose to partake. No Chode left behind, but extra Girth for those who dare to bridge.
-- **The Technical Handshake (Conceptual - Godot & Beyond):**
-    - *Preferred Chains (MVP):* Focus on EVM-compatible L2s for their wide adoption, lower gas fees, and robust tooling (e.g., Polygon, Arbitrum, Base – choose your degen playground). Solana is a strong contender for future expansion due to its speed and NFT ecosystem.
-    - *Wallet Standards:* Primarily MetaMask for browser/desktop, with considerations for WalletConnect to support a broader range of mobile and desktop wallets.
-    - *Implementation (Godot):* For web builds (often the easiest starting point for dApp GGodot interaction), \`JavaScriptBridge.eval()\` will be your conduit to Web3.js or Ethers.js libraries interacting with browser-based wallets. For native desktop, community plugins like \`web3.gdplugin\` or \`GodotOnChain\` offer pathways, though they require more intricate setup.
-- **The Benefits of Connection – A Taste of Immortality:** Upon successful connection, the player gains access to:
+- **The "Connect Wallet to Ascend" Beacon:** Within the game's UI (perhaps in the main menu, or a dedicated "Web3 Shrine" section), a prominent, enticing button will beckon. It shall not scream "Connect Wallet" in dry, technical terms. Nay, it shall proclaim: "CONNECT WALLET TO ASCEND THY GIRTH!" or "IMMORTALIZE THY CHODE ON SOLANA!" – language that speaks to the degen soul.
+- **Philosophy of Optionality & Enhancement:** This is paramount. Wallet connection is never required to play or enjoy the core game and its progression. Instead, it unlocks an additional layer of bragging rights, true ownership, and community status for those who choose to partake. No Chode left behind, but extra Girth for those who dare to bridge to Solana.
+- **The Technical Handshake (Conceptual - Godot & Solana):**
+    - *Preferred Chain:* **Solana** is our chosen battleground for its high throughput, low transaction fees, and robust tooling.
+    - *Wallet Standards:* We will prioritize leading Solana wallets such as **Phantom, Solflare, and Backpack**. **WalletConnect v2** remains a valuable asset for broader compatibility with other Solana-enabled wallets.
+    - *Implementation (Godot):* For web builds, \`JavaScriptBridge.eval()\` will communicate with Solana wallet browser extensions via their respective SDKs (e.g., Phantom Deeplinking, Solana Wallet Adapter). For native desktop, dedicated Solana SDKs or community Godot plugins for Solana will be explored.
+    - **Solana Advantage – xNFTs (Backpack):** This is a spicy one! The Backpack wallet supports **"executable NFTs (xNFTs)."** Imagine if your On-Chain Chode Badge or a high-tier Chode Avatar NFT wasn't just a static image, but an xNFT that could run a tiny, embedded $CHODE Tapper leaderboard viewer, a Girth-themed mini-game, or display your real-time in-game stats directly within the wallet itself. Pure degen futurism and a unique flex!
+- **The Benefits of Connection – A Taste of Solana-Powered Immortality:** Upon successful connection, the player gains access to:
     - The ability to mint the "On-Chain Chode Badge" NFT.
     - Enhanced Leaderboard presence (displaying ENS/Wallet Address).
     - Eligibility for specific on-chain prizes or airdrops (future).
@@ -252,10 +245,10 @@ This is the genesis block of your on-chain legacy, the first indelible mark of y
     - Successfully connects their Web3 wallet for the first time.
     - AND has reached a significant in-game milestone (e.g., achieved "Veinous Contender" status for The $CHODE, or accumulated their first 1,000,000 $GIRTH). This makes the badge a true testament to early dedication.
 - **The NFT Itself – A Work of Degen Art:**
-    - *Standard:* ERC-721 (for unique, non-fungible bragging rights) or ERC-1155 if you envision multiple badge tiers or editions later.
+    - *Standard:* NFTs minted on Solana, leveraging **Metaplex and its robust NFT standards (including the new Core standard)**. This allows for unique, non-fungible bragging rights or more flexible editions as needed for different badge tiers.
     - *Visuals:* A glorious, animated digital medal or crest, dripping with Chode-themed iconography. It should prominently feature the GigaChode insignia, perhaps a stylized $CHODE, and space for the player's chosen Degen Title (if minted after title selection) or wallet address.
     - *Metadata Attributes:*
-        - Name: "On-Chain Chode Badge of [Player's Chosen Degen Name/ENS]"
+        - Name: "On-Chain Chode Badge of [Player's Chosen Degen Name/SNS]"
         - Edition: "Genesis Slapper," "First Million Girth Club"
         - Date of Ascension: Timestamp of mint.
         - Issuing Authority: "The GigaChode High Command"
@@ -265,12 +258,12 @@ This is the genesis block of your on-chain legacy, the first indelible mark of y
     - *In-Game Recognition:* If wallet connected, the badge might appear next to the player's name on leaderboards or their in-game profile.
     - *Gatekeeper to the Gilded Halls (Future):* Potential access to exclusive Discord channels ("The Ascended Chodes Lounge"), early beta access for future GigaChode projects, or eligibility for future airdrops of $GIGA_CHODE governance tokens (should such a glorious day arrive).
 
-#### §7.3 Proof-of-Girth Leaderboard: Where Legends are Forged & Measured.
+#### §7.3 Proof-of-Girth Leaderboard: Where Legends are Forged & Measured on Solana.
 
-The standard in-game leaderboard is for mortals. The Proof-of-Girth Leaderboard is where demigods and full-blown Girth Gods compare their... metrics. This leaderboard pulls and displays data linked to connected wallets, offering a more expansive and verifiable view of Chode prowess.
+The standard in-game leaderboard is for mortals. The Proof-of-Girth Leaderboard is where demigods and full-blown Girth Gods compare their... metrics, all recorded with the speed and efficiency of Solana. This leaderboard pulls and displays data linked to connected Solana wallets, offering a more expansive and verifiable view of Chode prowess.
 
-**Key Metrics Beyond Simple Score:**
-- Peak $GIRTH (Verified Snapshot): Highest lifetime $GIRTH achieved, potentially timestamped and verifiable via a backend that snapshots data upon major milestones or player-initiated "Girth Record" submissions.
+**Key Metrics Beyond Simple Score (Enhanced by Solana's Speed):**
+- Peak $GIRTH (Verified Snapshot): Highest lifetime $GIRTH achieved. With Solana, these snapshots can be frequent and cost-effective.
 - AGP Accumulated: Total Ascended Girth Points earned through Second Comings – a true measure of long-term dedication.
 - Rebirth Count (Number of Second Comings): How many times has this Champion shed their mortal coil to be reborn in Girth?
 - Longest Combo Rush Duration: A testament to pure tapping skill and endurance.
@@ -280,15 +273,18 @@ The standard in-game leaderboard is for mortals. The Proof-of-Girth Leaderboard 
 
 **Displaying Degen Dominance:** Entries will proudly display connected ENS names, chosen NFT PFPs, and Degen Titles, making it a vibrant tapestry of the community's most dedicated members.
 
-**zkScore Integration (Optional, Highly Advanced Future-Proofing):** For Chodes who are whales in both $GIRTH and privacy, exploring zero-knowledge proof technologies like zkScore could conceptually allow them to prove they meet certain leaderboard criteria (e.g., "Top 1% of AGP Holders") without revealing their exact wallet balance or identity to the public leaderboard. This is deep future tech, but a worthy consideration for the truly degen-minded.
+**zkScore Integration (Optional, Highly Advanced Future-Proofing):** For Chodes who are whales in both $GIRTH and privacy, exploring zero-knowledge proof technologies (potentially those compatible with or bridgeable to Solana) could conceptually allow them to prove they meet certain leaderboard criteria (e.g., "Top 1% of AGP Holders") without revealing their exact wallet balance or identity to the public leaderboard. This is deep future tech, but a worthy consideration for the truly degen-minded.
 
-#### §7.4 Degen Identity: Wear Your Girth With Pride – ENS, PFP, and Titles.
+**Storing Hashes & On-Chain Data:**
+- **Solana Advantage for Leaderboards & Data:** Storing hashes of key achievements or top scores on Solana can be very efficient due to its low transaction costs and fast block times. Solana's account model and how it handles on-chain data could offer interesting, performant ways to structure this. Querying this on-chain data can be faster, potentially allowing for more dynamic and real-time on-chain leaderboard elements if you chose to go that deep.
 
-True Degens crave recognition and self-expression. $CHODE Tapper will provide ample avenues for this within its Web3-enhanced framework.
+#### §7.4 Degen Identity: Wear Your Girth With Pride – Solana Name Service, PFP, and Titles.
 
-- **ENS Integration:** Automatically detect and display a player's primary ENS (Ethereum Name Service) name if their connected wallet has one. Seeing "GigaChode.eth" atop the leaderboard is infinitely more prestigious than "0x123...abc."
-- **NFT PFP (Profile Picture) Showcase:** Allow players to select an NFT they own in their connected wallet to serve as their in-game profile picture. This PFP would appear on leaderboards, potentially in a small HUD element, or on their "Chode Champion Card." Imagine rocking your Bored Ape or CryptoPunk while discussing your Girthquake strategy.
-    *Technical Note:* This requires integration with NFT metadata APIs (like OpenSea's or a generic one) to fetch the image URL of the chosen NFT.
+True Degens crave recognition and self-expression. $CHODE Tapper will provide ample avenues for this within its Solana-enhanced Web3 framework.
+
+- **Solana Name Service (SNS) Integration:** Automatically detect and display a player's primary SNS name (e.g., .sol, .bonk) if their connected Solana wallet has one. Seeing "GigaChode.sol" atop the leaderboard is infinitely more prestigious than a long public key.
+- **NFT PFP (Profile Picture) Showcase:** Allow players to select an NFT they own in their connected Solana wallet to serve as their in-game profile picture. This PFP would appear on leaderboards, potentially in a small HUD element, or on their "Chode Champion Card." Imagine rocking your Mad Lad or DeGod while discussing your Girthquake strategy.
+    *Technical Note:* This requires integration with Solana NFT metadata APIs/indexers to fetch the image URL of the chosen NFT.
 - **Unlockable & Selectable Degen Titles:** As previously discussed, players unlock a variety of absurd and glorious titles through gameplay achievements, AGP expenditure, or special events. They can then select which title is displayed alongside their name and wallet identity.
     *Examples Revisited & Expanded:*
     - Gameplay Unlocks: "Novice Slapper," "Girthquake Guru," "Combo Kingpin," "Master of the Mega Slap," "Ejacu-Girth Evangelist."
@@ -296,12 +292,10 @@ True Degens crave recognition and self-expression. $CHODE Tapper will provide am
     - Special Event Unlocks: "Hero of the Girthgasm Event," "Bananaing Survivor," "Champion of Medieval Chodespeare."
     - Purely Degen Purchases (with $GIRTH or AGP): "Chief Executive Chode," "Her Royal Girthness," "The Tap Daddy," "Sir Slaps-A-Lot."
 
-## VOLUME III: THE BLOCKCHAIN TESTAMENT - WEB3 INTEGRATION & THE OUTER REALMS (Continued)
+## VOLUME III: THE BLOCKCHAIN TESTAMENT - WEB3 INTEGRATION & THE OUTER REALMS (PART II)
 
 ### Chapter 8: The Shrine of Eternal Girth
 *(Conceptual Staking Mechanics & Whispers from the DeFi Deeps)*
-
-**A Word of Divine Caution:** Hark, GigaChode! While the previous scriptures dealt with on-chain flexes of achievements largely confined within the glorious gameplay loop of $CHODE Tapper, this chapter ventures into conceptual territories that brush against the deeper magicks of Decentralized Finance (DeFi). These are ideas for future Girthspansions, speculative pathways to even greater degen devotion. Their implementation would require careful consideration of tokenomics (should a true $GIGA_CHODE token ever manifest), security audits, and the ever-shifting sands of the crypto landscape. For now, we chronicle them as dreams whispered by the Girth Gods – powerful, enticing, but to be approached with wisdom.
 
 #### §8.1 The In-Game Sanctum: Staking $GIRTH for Divine Boons.
 
@@ -324,15 +318,14 @@ Staking $GIRTH in the Shrine would yield powerful, passive in-game boons that pe
 
 #### §8.2 Whispers from the DeFi Deeps: Bridging to True On-Chain Utility (Highly Speculative Future Girthspansion).
 
-Now, GigaChode, we tread into the truly speculative, the "what if" that could elevate $CHODE Tapper from a Web3-enhanced game into a true degen nexus that interacts with the broader DeFi ecosystem. This is for the post-launch, "Season of the Giga-Token" era, should such a day dawn.
-
-**The Advent of a True $GIGA_CHODE Token (Hypothetical):**
-- Imagine a future where a cryptographic token, say $GIGA_CHODE (or $CHODE itself, if you dare), is launched on a public blockchain. This token could be earned through ultra-high-level in-game achievements, distributed to holders of the On-Chain Chode Badge NFT, or participate in liquidity pools on Decentralized Exchanges (DEXs).
+**The Advent of a True $GIGA_CHODE SPL Token (Hypothetical):**
+- Imagine a future where a cryptographic token, say $GIGA_CHODE (or $CHODE itself, if you dare), is launched on the Solana blockchain as an **SPL Token (Solana Program Library standard)**. This token could be earned through ultra-high-level in-game achievements, distributed to holders of the On-Chain Chode Badge NFT, or participate in liquidity pools on Solana-based Decentralized Exchanges (DEXs).
+- **Solana Advantage:** Transactions with SPL tokens are incredibly **fast and cheap**, making micro-transactions or frequent reward distributions (if ever part of the model) far more feasible and user-friendly than on more congested networks.
 
 **LP Staking for Ultimate In-Game Flex – "The DeFi Devotee":**
-- *Concept:* Players who provide liquidity for the $GIGA_CHODE token (e.g., $GIGA_CHODE/ETH LP tokens on Uniswap, or a similar L2 DEX) could then stake those LP tokens via a separate Web3 interface connected to the game's ecosystem.
+- *Concept:* Players who provide liquidity for the $GIGA_CHODE SPL token (e.g., $GIGA_CHODE/SOL LP tokens on Solana DEXs like **Orca, Raydium, or Meteora**) could then stake those LP tokens via a separate Web3 interface connected to the game's ecosystem. Smart contracts for such staking would likely be built using **Rust with the Anchor framework** on Solana.
 - *The Reward:* Successfully staking these actual DeFi assets would unlock the most exclusive, outrageously ostentatious in-game cosmetic rewards imaginable within $CHODE Tapper. We're talking:
-    - The "Liquidity God" $CHODE Skin: A $CHODE made of swirling, ethereal representations of ETH and $GIGA_CHODE logos, constantly emitting particle effects of DEX trade symbols.
+    - The "Liquidity God" $CHODE Skin: A $CHODE made of swirling, ethereal representations of SOL and $GIGA_CHODE logos, constantly emitting particle effects of DEX trade symbols.
     - The "Yield Farmer" UI Theme: A game theme where all UI elements are styled after popular DeFi dashboards, with charts, graphs (all showing Girth going up, naturally), and "APY%" displays.
     - Exclusive "Degen Titles": "LP Baron," "Yield Sensei," "Imperator of Impermanent Girth."
 - *The Bridge:* This creates a powerful, symbiotic link between the game's engagement and the health/liquidity of its (hypothetical) associated token. It rewards players not just for playing the game, but for actively participating in its on-chain ecosystem.
@@ -342,7 +335,8 @@ Now, GigaChode, we tread into the truly speculative, the "what if" that could el
     *Example:* Staking the "Diamond Chode" NFT might grant a tiny, permanent +0.001% to your $GIRTH "luck factor" (crit chance). Staking a "ChodeBot Army Collection" NFT series might give your in-game ChodeBots a unique cosmetic trail.
 
 **Cross-Pollination with Partner Protocols:**
-- The GigaChode brand could collaborate with other degen-friendly meme coin or DeFi projects. Holding tokens or NFTs from partnered projects could unlock unique crossover skins or temporary boosts within $CHODE Tapper. Example: "The $PEPE Chode" skin, unlocked by connecting a wallet holding a certain amount of $PEPE.
+- The GigaChode brand could collaborate with other degen-friendly meme coin or DeFi projects within the **vibrant DeFi ecosystem on Solana**. Holding tokens or NFTs from partnered projects could unlock unique crossover skins or temporary boosts within $CHODE Tapper. Example: "The $BONK Chode" skin, unlocked by connecting a wallet holding a certain amount of $BONK or a Mad Lad.
+- **Solana Advantage:** The active and innovative DeFi community on Solana offers many potential partners for cross-promotional Girth-fueled staking adventures and integrations.
 
 #### §8.3 The Sanctity of the System: Security & Clarity.
 
@@ -361,20 +355,23 @@ A Proclamation of Covetousness: Hark, ye Chode Champions! While $GIRTH is the li
 
 §9.1 The Sanctity of Scarcity: Why On-Chain Relics Reign Supreme.
 
-In the Girthy Bible, some treasures are too magnificent, too singular, to exist merely as fleeting pixels within the game client. These are destined for the immutable permanence of the blockchain, granting their owners:
+In the Girthy Bible, some treasures are too magnificent, too singular, to exist merely as fleeting pixels within the game client. These are destined for the immutable permanence of the Solana blockchain, granting their owners:
 
-True, Verifiable Ownership: This ain't your typical game item that vanishes when the servers go dark (though our servers will run on pure Chode-will for eternity!). An NFT Relic in your connected wallet is yours. To display, to cherish, to potentially (market gods willing) trade on the grand exchanges of the degen metaverse.
+True, Verifiable Ownership: This ain't your typical game item that vanishes when the servers go dark (though our servers will run on pure Chode-will for eternity!). An NFT Relic minted on Solana, residing in your connected wallet, is yours. To display, to cherish, to potentially (market gods willing) trade on the grand exchanges of the degen metaverse.
 The Ultimate Flex: What is Girth if not to be flaunted? Possessing a "Mythic Tier Glitch-Forged BattleChode" isn't just a cosmetic choice; it's a declaration. It's a beacon that screams, "BEHOLD MY DEVOTION AND/OR IMPECCABLE TIMING DURING THE MINT!"
 A Collector's Dream (or Nightmare): For those touched by the divine madness of collect OOOOOO -mania, these NFT Relics will be the holy grails, the missing pieces in the puzzle of ultimate Chode completion.
 Potential for Future Utility: While primarily cosmetic flexes, certain NFT Relics might unlock unique chat flairs in the GigaChode Discord, grant early access to future Girthspansions, or even whisper secret game modifiers only their owners can perceive (e.g., a unique ambient sound when a particular NFT skin is equipped).
+
 §9.2 The Hallowed Tiers of Girthly Grandeur: A Taxonomy of Pixel-Dripped Glory.
 
-Not all Relics are created equal. A strict hierarchy, a divine taxonomy of desire, shall dictate their prestige and perceived value. Each tier is a testament to metadata-tiered madness, designed to make whales weep and weak hands tremble:
+Not all Relics are created equal. A strict hierarchy, a divine taxonomy of desire, shall dictate their prestige and perceived value. Each tier is a testament to metadata-tiered madness, designed to make whales weep and weak hands tremble. The "On-Chain Chode Badge," "Exotic Specimens," and future "Mythic Monoliths" will be minted as proud Solana NFTs, leveraging the power of **Metaplex and its robust NFT standards (including the new Core standard).**
+
+**Solana Advantage – Compressed NFTs (cNFTs):** For high-volume NFTs like potentially more common achievement badges, daily login reward NFTs, or even "The People's Pixels" tier of Chode cosmetics, cNFTs on Solana allow for minting at a drastically reduced cost (pennies, or fractions thereof). This enables "NFT-ifying" more aspects of the game, making ownership more widespread and the on-chain flex more accessible to every degen. Imagine daily "Proof-of-Tap" cNFTs for dedicated players!
 
 COMMON CHODESTUFF (The People's Pixels):
 
-Concept: While not always NFTs, some high-tier in-game cosmetics purchasable with vast sums of $GIRTH or AGP might have an "NFT-upgrade" option for a nominal gas fee, allowing players to mint their hard-earned in-game achievements onto the chain.
-Example: Minting your "Level 5 Cosmic Chode God" visual as a basic "Proof-of-Ascension" NFT.
+Concept: While not always NFTs by default, some high-tier in-game cosmetics purchasable with vast sums of $GIRTH or AGP might have an "NFT-upgrade" option for a nominal gas fee on Solana, allowing players to mint their hard-earned in-game achievements onto the chain. This tier is a prime candidate for **cNFTs**, making on-chain proof highly accessible.
+Example: Minting your "Level 5 Cosmic Chode God" visual as a basic "Proof-of-Ascension" cNFT.
 Feel: Accessible bragging rights for dedicated players.
 UNCOMMON ARTIFACTS (Whispers of Distinction):
 
@@ -396,20 +393,42 @@ MYTHIC MONOLITHS (The God-Tier Grails):
 Concept: Almost impossibly rare, perhaps only 10-100 minted ever. These are the crown jewels of the Chodeverse. Their minting could be tied to monumental community achievements, being the absolute first to achieve a "Quintillion Girth Score," or through an auction where proceeds go to "charity" (or back into the prize pool for degen events).
 Example: The "Legendary Girth Crown of GigaChode Himself" (a ridiculously ornate, animated crown that sits atop your $CHODE, radiating an aura of pure, unfiltered authority and a rain of golden $GIRTH particles), the "Key to the Citadel of Chodes" (a purely symbolic NFT that grants no in-game power but immense off-chain status), the "Shard of the Monolith" (your $CHODE becomes a piece of the very Monolith you mentioned, pulsing with primordial power).
 Feel: You don't own a Mythic Monolith. It owns you. It's a burden of glory. Whales will wage war for these.
-§9.3 The Oracle of True Rarity: Chainlink VRF & The Promise of Provable Scarcity (Conceptual Future-Proofing).
+§9.3 The Oracle of True Rarity: Switchboard VRF & The Promise of Provable Scarcity (Conceptual Future-Proofing).
 
 For Relics where rarity is determined by chance (e.g., drops from Corrupted Data Caches, outcomes of certain minting events), the GigaChode ethos demands transparency and fairness, even amidst the beautiful chaos.
 
 The Problem of Trust: Degens are a skeptical bunch. How can they be sure that a "Rare Relic" is truly rare, and not just something the GigaChode devs decided to mint more of on a whim?
-The Oracle's Solution (Conceptual): For future NFT drops involving randomness, we envision integrating Chainlink Verifiable Random Function (VRF).
-What it is: Chainlink VRF provides cryptographically secure randomness that can be verified on-chain. This means the outcome of a random event (like "what tier of Relic did I get from this Cache?") is generated in a way that is provably fair and tamper-proof.
-The GigaChode Promise: By using an on-chain oracle like Chainlink VRF, we can assure the community that the stated drop rates and rarity distributions for specific NFT series are not just promises, but verifiably enforced realities. This builds immense trust and adds significant value to the rarest items.
-Implementation: This is an advanced Web3 integration, requiring smart contract development that can call the VRF service and use its output to determine mint outcomes. For early phases, simpler pseudo-random off-chain methods can be used, but with a roadmap commitment to on-chain verifiable randomness for high-value assets.
+The Oracle's Solution (Conceptual): For future NFT drops involving randomness, we envision integrating **Switchboard VRF (or other Solana-native VRF solutions)**.
+What it is: Solana-native VRF solutions like Switchboard provide cryptographically secure randomness that can be verified on-chain. This means the outcome of a random event (like "what tier of Relic did I get from this Cache?") is generated in a way that is provably fair and tamper-proof.
+The GigaChode Promise: By using an on-chain oracle like **Switchboard VRF**, we can assure the community that the stated drop rates and rarity distributions for specific NFT series are not just promises, but verifiably enforced realities. This builds immense trust and adds significant value to the rarest items.
+Implementation: This is an advanced Web3 integration, requiring smart contract development that can call the VRF service and use its output to determine mint outcomes. For early phases, simpler pseudo-random off-chain methods can be used, but with a roadmap commitment to on-chain verifiable randomness for high-value assets, leveraging the strengths of Solana's oracle infrastructure.
 §9.4 The Minting Madness & Secondary Markets: Where Legends are Forged in Gas Wars (A Glimpse Beyond).
 
 The Mint Event: The release of new, rare NFT Relics should be an event. Anticipation, limited-time mint windows, perhaps even escalating mint prices or Dutch auctions for Mythic tiers. The "fury of a thousand glitched mint buttons" should be a palpable experience.
 The Unspoken Promise (Secondary Markets): While $CHODE Tapper and the GigaChode team will not operate a secondary market directly, the very nature of these on-chain NFT Relics (especially those on standard marketplaces like OpenSea, Blur, etc.) means a player-driven secondary market is likely to emerge. The potential for your "Blessed Banana of Scale" to be traded for enough ETH to buy an actual banana plantation... well, that's the degen dream, isn't it? (No financial advice, obviously. Bananas are volatile.)
-The Rarity Scripture is now writ, GigaChode! The hierarchies of desire, the pixel-dripped glories, and the promise of provable scarcity have been laid bare. The collectors are not just craving; they are convulsing with anticipatory FOMO! This chapter solidifies the aspirational endgame for your most dedicated Chode Champions.
+The hierarchies of desire, the pixel-dripped glories, and the promise of provable scarcity have been laid bare. The collectors are not just craving; they are convulsing with anticipatory FOMO! This chapter solidifies the aspirational endgame for the most dedicated Chode Champions.
 
-With this, Volume III of the Girthy Bible, The Blockchain Testament, draws to a close. The final volume, The Degenvinci Code - Community & The Future Fornications, awaits. It is there we shall speak of the ongoing rituals, the seasonal cycles, and the grand, Girthy roadmap to eternal memetic dominance!
+## VOLUME IV: THE DEGENVINCI CODE - COMMUNITY & THE FUTURE FORNICATIONS
+
+### Chapter 10: The Congregation of Chodes - Community & LiveOps
+
+§10.1 The Solana Sun-Rituals: Forging a Degen Legion within the Speed-Force Ecosystem
+
+"The shift of $CHODE Tapper's on-chain aspirations to the hyper-efficient Solana network is not merely a technical migration; it is an EMBRACE OF THE SOLANA SOUL! Our community, The Congregation of Chodes, shall bask in the relentless energy of this ecosystem. Our LiveOps will be infused with Solana's degen spirit:
+
+- Targeted Degen Raids & Solana Summer Slap-Offs: We shall actively engage with and raid (in the most loving, Girth-positive way) established Solana-focused gaming communities, Discords, and X-spaces. Expect $CHODE Tapper tournaments, "Fastest Tap on the West (Coast Chain)" competitions, and AMA sessions broadcast live from the heart of Solana's digital forums. We are not just visitors; we are here to build a permanent, glorious, Chode-shaped embassy.
+- Cross-Pollination with Solana Meme & Gaming Royalty: The GigaChode brand will seek righteous alliances! Imagine co-branded in-game events, shared NFT Easter eggs, or even limited-edition $CHODE Tapper skins unlocked by holding tokens or NFTs from prominent Solana-native meme projects or pioneering Solana games. The Girth shall flow, and the partnerships shall be legendary!
+- Showcasing on Solana Gaming Platforms & Showcases: We will thrust $CHODE Tapper into every relevant Solana gaming showcase, every indie game spotlight, every virtual event that celebrates the innovation thrumming on this chain. Let the Solana degens witness our Girth firsthand!
+- Hyper-Local (to Solana) Community Challenges: 'Tap-to-Mint' events where the entry fee is a micro-transaction of SOL (or a Solana-based meme coin), with proceeds going to a community-chosen Solana degen artist for more Chode-themed art. Let's make Solana's low fees work for our community engagement!"
+
+### Chapter 11: The Roadmap to Rapture - Future Girthspansions
+
+§11.1 Solana-Charged Future Fornications: Deepening the On-Chain Integration & Mobile Domination
+
+"Our Girthy gaze extends far into the future of the Solana ecosystem, envisioning deeper integrations and expansions that leverage the unique strengths of this high-performance blockchain:
+
+- Embracing Solana-Native Gaming SDKs & Tooling: As the Solana gaming landscape matures, we will actively explore and integrate with Solana-specific Software Development Kits, analytics platforms, and on-chain gaming services that can enhance the $CHODE Tapper experience, making it smoother, faster, and even more degen-proof.
+- The Quest for the Pocket Chode (Solana Mobile Stack - SMS): Solana's visionary push into mobile with the Solana Mobile Stack and Saga phone opens a tantalizing pathway. A future roadmap priority will be the exploration and development of a mobile-native version of $CHODE Tapper, optimized for on-the-go Girth accumulation and seamless dApp Store integration.
+- Launchpad Liaisons & Tokenomic Triumphs (Hypothetical Future): Should the day of the $GIGA_CHODE token dawn, we will strategically consider aligning with respected Solana-native launchpads to ensure a fair, transparent, and degen-friendly distribution. The tokenomics themselves would be designed to thrive within Solana's high-throughput environment.
+- Pioneering with xNFTs & Next-Gen Solana Standards: We will keep our Giga-Gaze fixed on emerging Solana technologies like executable NFTs (xNFTs via Backpack), compressed NFT advancements, and novel on-chain identity solutions. Could your "On-Chain Chode Badge" evolve into an xNFT with embedded mini-games or direct links to your in-game Girth stats? Within the Solana ecosystem, such divine madness is not only possible but encouraged! We aim for $CHODE Tapper to be a shining beacon of what a degen-focused, community-first game can achieve on the cutting edge of Solana."
 `; 

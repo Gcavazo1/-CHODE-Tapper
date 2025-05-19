@@ -103,6 +103,7 @@
   font-size: 1rem;
   font-weight: bold;
   border: 2px dashed $color-blue-glitch;
+  box-shadow: 0 0 10px 0 rgba($color-pink-girth-glow, 0.5);
   padding: 1rem; // Increased padding
   text-align: center;
   transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
@@ -158,12 +159,57 @@
 }
 
 .tierPlaceholder {
-  aspect-ratio: 3 / 4; // More rectangular for tier previews
+  aspect-ratio: 3 / 4;
+  scale: 0.9; // More rectangular for tier previews
   font-size: 1.1rem;
 }
 
 .itemPlaceholder { // Generic for enhancements, themes, skins unless overridden
   // Default square aspect ratio is fine
+}
+
+// Added styles for Coming Soon overlay
+.comingSoonContainer {
+  position: relative;
+}
+
+.comingSoonOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-black-void, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.comingSoonOverlayText {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: $color-gold-degen;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1rem;
+  border: 2px solid $color-gold-degen;
+  box-shadow: 0 0 15px rgba($color-gold-degen, 0.5);
+  transform: rotate(-10deg);
+  background-color: rgba($color-black-void, 0.5);
+  text-shadow: 0 0 5px $color-gold-degen;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 15px rgba($color-gold-degen, 0.5);
+    text-shadow: 0 0 5px $color-gold-degen;
+  }
+  to {
+    box-shadow: 0 0 20px rgba($color-gold-degen, 0.8);
+    text-shadow: 0 0 10px $color-gold-degen;
+  }
 }
 
 .enhancementItem {

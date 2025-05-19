@@ -10,6 +10,12 @@ const ImagePlaceholder = ({ name, type }: { name: string, type: string }) => (
   </div>
 );
 
+const ComingSoonOverlay = () => (
+  <div className={styles.comingSoonOverlay}>
+    <span className={styles.comingSoonOverlayText}>COMING SOON</span>
+  </div>
+);
+
 const EconomySection: React.FC = () => {
   return (
     <section className={styles.economySection}>
@@ -27,47 +33,49 @@ const EconomySection: React.FC = () => {
           <div className={`${styles.itemGrid} ${styles.tierGrid}`}>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/humble_sprout02.jpg"
+                src="/models/chodes/humble_sprout.png"
                 alt="Tier 1: Humble Sprout"
                 layout="fill"
-                objectFit="cover"
+                objectFit="contain"
               />
             </div>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/veinous_veridian.jpg"
+                src="/models/chodes/veinous_veridian.png"
                 alt="Tier 2: Veinous Veridian"
                 layout="fill"
-                objectFit="cover"
+                objectFit="contain"
               />
             </div>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/cracked_core.jpg"
+                src="/models/chodes/cracked_core.png"
                 alt="Tier 3: Cracked Core"
                 layout="fill"
-                objectFit="cover"
+                objectFit="contain"
               />
             </div>
-            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
+            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder} ${styles.comingSoonContainer}`}>
               <Image
                 src="/models/radiant_eminence03.jpg"
                 alt="Tier 4: Radiant Eminence"
                 layout="fill"
                 objectFit="cover"
               />
+              <ComingSoonOverlay />
             </div>
-            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
+            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder} ${styles.comingSoonContainer}`}>
               <Image
                 src="/models/cosmic_chode_prime.jpg"
                 alt="Tier 5: Cosmic Chode Prime"
                 layout="fill"
                 objectFit="cover"
               />
+              <ComingSoonOverlay />
             </div>
           </div>
           <p className={styles.disclaimerText}>
-            (Prompt-generated conceptual art. Visual representations of the glorious evolution of thy member, not final in-game assets.)
+            (First 3 tiers: actual in-game assets. Tiers 4-5: conceptual art, not final assets.)
           </p>
         </div>
 

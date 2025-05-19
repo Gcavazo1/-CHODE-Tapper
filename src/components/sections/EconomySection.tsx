@@ -29,41 +29,47 @@ const EconomySection: React.FC = () => {
               <Image
                 src="/models/humble_sprout.png"
                 alt="Tier 1: Humble Sprout"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
               />
             </div>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
                 src="/models/veinous_veridian.png"
                 alt="Tier 2: Veinous Veridian"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
               />
             </div>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
                 src="/models/cracked_core.png"
                 alt="Tier 3: Cracked Core"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
               />
             </div>
-            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
+            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder} ${styles.comingSoonContainer}`}>
               <Image
                 src="/models/radiant_eminence03.jpg"
                 alt="Tier 4: Radiant Eminence"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
               />
+              <div className={styles.comingSoonOverlay}>
+                <span className={styles.comingSoonOverlayText}>Coming Soon</span>
+              </div>
             </div>
-            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
+            <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder} ${styles.comingSoonContainer}`}>
               <Image
                 src="/models/cosmic_chode_prime.jpg"
                 alt="Tier 5: Cosmic Chode Prime"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
               />
+              <div className={styles.comingSoonOverlay}>
+                <span className={styles.comingSoonOverlayText}>Coming Soon</span>
+              </div>
             </div>
           </div>
           <p className={styles.disclaimerText}>

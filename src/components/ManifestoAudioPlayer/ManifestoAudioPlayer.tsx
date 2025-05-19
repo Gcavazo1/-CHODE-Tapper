@@ -72,7 +72,12 @@ const ManifestoAudioPlayer: React.FC<ManifestoAudioPlayerProps> = ({ className }
             if (isMountedRef.current) setIsPlaying(true);
         } catch (playError) {
             console.error('Error re-playing audio:', playError);
-            if (isMountedRef.current) setError(`Failed to re-play audio: ${playError.message}`);
+            if (isMountedRef.current) {
+                const errorMessage = playError instanceof Error 
+                    ? playError.message 
+                    : 'An unknown error occurred while playing audio';
+                setError(`Failed to re-play audio: ${errorMessage}`);
+            }
             cleanupAudioResources(); // Clean up if replay fails
         }
         return;

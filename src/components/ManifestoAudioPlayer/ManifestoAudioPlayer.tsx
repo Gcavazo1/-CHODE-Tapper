@@ -164,7 +164,10 @@ const ManifestoAudioPlayer: React.FC<ManifestoAudioPlayerProps> = ({ className }
         } catch (playError) {
             if (!isMountedRef.current) return;
             console.error('Failed to play audio immediately after load:', playError);
-            setError(`Failed to play audio: ${playError.message}`);
+            const errorMessage = playError instanceof Error
+                ? playError.message
+                : 'An unknown error occurred while playing audio';
+            setError(`Failed to play audio: ${errorMessage}`);
             setIsPlaying(false);
             cleanupAudioResources();
         }

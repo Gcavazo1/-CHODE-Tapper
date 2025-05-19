@@ -15,7 +15,7 @@ A meme-powered, dopamine-fueled antidote to soulless crypto projects.
 
 Community-first: Deen's unite via leaderboards, events, and shared absurdity.
 
-2. GIRTHONOMICS (ECONOMY).
+2. GIRTH-ECONOMICS (In Game Economy System).
 GIRTH: Earned by tapping, spent on upgrades:
 
 Chode Evolution: Grow from Humble Sprout to Cosmic God-Tier Monolith.

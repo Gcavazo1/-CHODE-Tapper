@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import ReactMarkdown from 'react-markdown';
+import type { Components } from 'react-markdown';
 import styles from './ManifestoViewer.module.scss';
 
 interface ManifestoViewerProps {
@@ -15,6 +16,8 @@ interface VolumeNavItem {
   title: string;
   index: number;
 }
+
+// We're not defining our own type anymore, we'll use the proper casting
 
 const ManifestoViewer: React.FC<ManifestoViewerProps> = ({ isOpen, onClose, manifestoText }) => {
   const [volumeNavItems, setVolumeNavItems] = useState<VolumeNavItem[]>([]);
@@ -75,8 +78,8 @@ const ManifestoViewer: React.FC<ManifestoViewerProps> = ({ isOpen, onClose, mani
     }
   };
 
-  // Update active volume based on scroll position
-  const handleScroll = () => {
+  // Update active volume based on scroll position - wrapped in useCallback
+  const handleScroll = useCallback(() => {
     if (!contentRef.current || volumeNavItems.length === 0) return;
     
     const scrollPosition = contentRef.current.scrollTop;
@@ -89,7 +92,7 @@ const ManifestoViewer: React.FC<ManifestoViewerProps> = ({ isOpen, onClose, mani
         break;
       }
     }
-  };
+  }, [volumeNavItems]);
 
   useEffect(() => {
     const content = contentRef.current;
@@ -97,14 +100,17 @@ const ManifestoViewer: React.FC<ManifestoViewerProps> = ({ isOpen, onClose, mani
       content.addEventListener('scroll', handleScroll);
       return () => content.removeEventListener('scroll', handleScroll);
     }
-  }, [volumeNavItems]);
+  }, [volumeNavItems, handleScroll]);
 
   // Custom components for ReactMarkdown to add IDs to headings
-  const markdownComponents = {
-    h2: ({ node, children, ...props }: any) => {
+  const markdownComponents: Components = {
+    h2: ({ node, children, ...props }) => {
+      // Type assertion for accessing node properties safely
+      const nodeWithChildren = node as { children?: Array<{ value?: string }> };
+      
       // Get the raw text content
-      if (node?.children && node.children[0]?.value) {
-        const rawTextContent = node.children[0].value as string;
+      if (nodeWithChildren?.children && nodeWithChildren.children[0]?.value) {
+        const rawTextContent = nodeWithChildren.children[0].value;
         
         if (headingsWithIds.has(`## ${rawTextContent}`)) {
           const id = headingsWithIds.get(`## ${rawTextContent}`);

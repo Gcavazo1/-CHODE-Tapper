@@ -27,7 +27,7 @@ const EconomySection: React.FC = () => {
           <div className={`${styles.itemGrid} ${styles.tierGrid}`}>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/humble_sprout02.jpg"
+                src="/models/humble_sprout.png"
                 alt="Tier 1: Humble Sprout"
                 layout="fill"
                 objectFit="cover"
@@ -35,7 +35,7 @@ const EconomySection: React.FC = () => {
             </div>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/veinous_veridian.jpg"
+                src="/models/veinous_veridian.png"
                 alt="Tier 2: Veinous Veridian"
                 layout="fill"
                 objectFit="cover"
@@ -43,7 +43,7 @@ const EconomySection: React.FC = () => {
             </div>
             <div className={`${styles.imagePlaceholder} ${styles.tierPlaceholder}`}>
               <Image
-                src="/models/cracked_core.jpg"
+                src="/models/cracked_core.png"
                 alt="Tier 3: Cracked Core"
                 layout="fill"
                 objectFit="cover"

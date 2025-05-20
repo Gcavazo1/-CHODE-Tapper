@@ -1,6 +1,6 @@
 export const manifestoSummary = `
 THE SACRED SCROLLS OF GIRTH...The Ascension Manifesto!
-A Degenerate's Guide to CHODE Tapper
+A Degenerate's Guide to CHODE Tapper.
 
 1. THE VISION.
 What is CHODE-Tapper? A hyper-addictive idle-tapper game where you Slap the Sacred CHODE to earn GIRTH, unlock degenerate upgrades, and flex on-chain via Solana.

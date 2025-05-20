@@ -3,7 +3,7 @@ THE SACRED SCROLLS OF GIRTH...The Ascension Manifesto!
 A Degenerate's Guide to CHODE Tapper.
 
 1. THE VISION.
-What is CHODE-Tapper? A hyper-addictive idle-tapper game where you Slap the Sacred CHODE to earn GIRTH, unlock degenerate upgrades, and flex on-chain via Solana.
+So, what is Chode Tapper? Imagine Cookie Clicker getting dragged through a cyberpunk dumpster fire in a grimey alley, then infused with pure Web3 power & grit. It's gloriously filthy, endlessly rewarding, and built for true blockchain de gens. A hyper-addictive idle-tapper game where you Slap the Sacred CHODE to earn GIRTH, unlock degenerate upgrades, and flex on-chain via Solana.
 
 Core Loop: Tap to Earn GIRTH, to upgrade, to ascend, to repeat.
 

@@ -1,8 +1,14 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import styles from './GameplaySection.module.scss';
+import WebInterfaceViewer from '../WebInterfaceViewer/WebInterfaceViewer';
+import { webInterfaceContent } from '../WebInterfaceContent';
 
 const GameplaySection: React.FC = () => {
+  const [isViewerOpen, setIsViewerOpen] = React.useState(false);
+
   return (
     <section id="gameplay" className={styles.gameplaySection}>
       <div className="container">
@@ -53,6 +59,24 @@ const GameplaySection: React.FC = () => {
           </div>
         </div>
         <p className={styles.hint}>*(Hint at Fusion Boosts): Discover arcane combinations for ultimate power!*</p>
+
+        {/* Web Interface Concept Section */}
+        <div className={styles.interfacePreview}>
+          <button
+            className={styles.viewInterfaceButton}
+            onClick={() => setIsViewerOpen(true)}
+          >
+            View Web Interface Concept
+          </button>
+          <p className={styles.interfaceHint}>
+            Explore the full $CHODE Tapper web interface blueprint, including shop, relics, and on-chain features.
+          </p>
+        </div>
+        <WebInterfaceViewer
+          isOpen={isViewerOpen}
+          onClose={() => setIsViewerOpen(false)}
+          interfaceText={webInterfaceContent}
+        />
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import { TextToSpeechClient } from '@google-cloud/text-to-speech';
 import { NextRequest, NextResponse } from 'next/server';
 import { manifestoSummary } from '@/components/ManifestoSummary';
+import { girthonomicsSummary } from '@/components/GirthonomicsSummary';
 import { protos } from '@google-cloud/text-to-speech';
 
 // Use proper enum types
@@ -81,6 +82,7 @@ export async function GET(request: NextRequest) {
     
     const url = new URL(request.url);
     const voiceIdFromQuery = url.searchParams.get('voiceName');
+    const summaryKey = url.searchParams.get('summaryKey') || 'main';
     
     let selectedVoiceDetails = AVAILABLE_VOICES[voiceIdFromQuery || DEFAULT_VOICE_ID];
     if (!selectedVoiceDetails) {
@@ -90,8 +92,10 @@ export async function GET(request: NextRequest) {
 
     console.log(`Preparing TTS request with voice: ${selectedVoiceDetails.name}`);
     
-    const narrationText = prepareTextForTTS(manifestoSummary);
-    console.log(`Narrating summarized text, length: ${narrationText.length} characters`);
+    // Select the appropriate summary based on summaryKey
+    const summaryText = summaryKey === 'girthonomics' ? girthonomicsSummary : manifestoSummary;
+    const narrationText = prepareTextForTTS(summaryText);
+    console.log(`Narrating ${summaryKey} summary, length: ${narrationText.length} characters`);
     
     // Use the proper type for the request
     const ttsRequest: protos.google.cloud.texttospeech.v1.ISynthesizeSpeechRequest = {

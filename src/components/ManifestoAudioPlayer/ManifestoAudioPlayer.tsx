@@ -5,6 +5,7 @@ import styles from './ManifestoAudioPlayer.module.scss';
 
 interface ManifestoAudioPlayerProps {
   className?: string;
+  summaryKey?: string;
 }
 
 const VOICE_OPTIONS = [
@@ -14,7 +15,7 @@ const VOICE_OPTIONS = [
   { id: 'en-US-Neural2-F', name: 'Female (Articulate, Gravitas - Neural2)' },
 ];
 
-const ManifestoAudioPlayer: React.FC<ManifestoAudioPlayerProps> = ({ className }) => {
+const ManifestoAudioPlayer: React.FC<ManifestoAudioPlayerProps> = ({ className, summaryKey }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -90,7 +91,10 @@ const ManifestoAudioPlayer: React.FC<ManifestoAudioPlayerProps> = ({ className }
 
     try {
       console.log(`Fetching audio from API with voice: ${selectedVoice}...`);
-      const response = await fetch(`/api/narrate-manifesto?voiceName=${encodeURIComponent(selectedVoice)}`);
+      const apiUrl = summaryKey 
+        ? `/api/narrate-manifesto?voiceName=${encodeURIComponent(selectedVoice)}&summaryKey=${encodeURIComponent(summaryKey)}` 
+        : `/api/narrate-manifesto?voiceName=${encodeURIComponent(selectedVoice)}`;
+      const response = await fetch(apiUrl);
       
       if (!isMountedRef.current) return; // Check after await
       console.log('API Response status:', response.status);

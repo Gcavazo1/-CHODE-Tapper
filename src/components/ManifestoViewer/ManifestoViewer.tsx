@@ -10,6 +10,7 @@ interface ManifestoViewerProps {
   isOpen: boolean;
   onClose: () => void;
   manifestoText: string;
+  summaryKey?: string;
 }
 
 interface VolumeNavItem {
@@ -20,7 +21,7 @@ interface VolumeNavItem {
 
 // We're not defining our own type anymore, we'll use the proper casting
 
-const ManifestoViewer: React.FC<ManifestoViewerProps> = ({ isOpen, onClose, manifestoText }) => {
+const ManifestoViewer: React.FC<ManifestoViewerProps> = ({ isOpen, onClose, manifestoText, summaryKey }) => {
   const [volumeNavItems, setVolumeNavItems] = useState<VolumeNavItem[]>([]);
   const contentRef = useRef<HTMLDivElement>(null);
   const [activeVolume, setActiveVolume] = useState<string>("");
@@ -131,7 +132,7 @@ const ManifestoViewer: React.FC<ManifestoViewerProps> = ({ isOpen, onClose, mani
       <div className={styles.modalContainer} onClick={(e) => e.stopPropagation()}>
         <div className={styles.volumeNavigation}>
           <h3 className={styles.navTitle}>The Sacred Scrolls</h3>
-          <ManifestoAudioPlayer className={styles.audioPlayer} />
+          <ManifestoAudioPlayer className={styles.audioPlayer} summaryKey={summaryKey} />
           <ul className={styles.volumeList}>
             {volumeNavItems.map((volume) => (
               <li key={volume.id}>

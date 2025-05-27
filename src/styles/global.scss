@@ -69,6 +69,7 @@ body, h1, h2, h3, p, ul, li {
   --color-text-secondary: #{vars.$color-text-secondary};
   --color-cyber-blue: #{vars.$color-cyber-blue};
   --color-cyber-blue-glow: #{vars.$color-cyber-blue-glow};
+  --color-cyber-blue-light: #{vars.$color-cyber-blue-light};
   --color-pink-girth-glow: #{vars.$color-pink-girth-glow};
   --color-accent-neon: #{vars.$color-accent-neon};
   --color-accent-neon-glow: #{vars.$color-accent-neon-glow};
@@ -86,6 +87,7 @@ body, h1, h2, h3, p, ul, li {
   --color-pink-girth-rgb: 255, 0, 255;
   --color-green-slime-rgb: 0, 255, 0;
   --color-gold-degen-rgb: 255, 215, 0;
+  --color-cyber-blue-rgb: 0, 191, 255;
   --color-blue-glitch-rgb: 0, 255, 255;
   --color-red-warning-rgb: 255, 69, 0;
 

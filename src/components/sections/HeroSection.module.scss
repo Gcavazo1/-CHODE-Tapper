@@ -220,8 +220,76 @@
   font-style: italic;
 }
 
+// Styles for the new Demo Button within Hero Section
+.btnDemo {
+  @extend .btnWaitsList; // Extend the styles of the waitlist button
+  background-color: var(--color-cyber-blue); // Override background
+  color: var(--color-white-signal); // Ensure text color is appropriate for new background
+  margin-top: var(--space-sm); // Add some space above it (or adjust as needed)
+  text-decoration: none; // Ensure no underline if it's an <a> tag
+  display: block; // Ensure it takes full width if it's an <a> tag and on mobile
+  text-align: center; // Center text
+
+  &:hover {
+    background-color: var(--color-cyber-blue-light); // Use the new lighter variable for hover
+    box-shadow: 0 4px 12px rgba(var(--color-cyber-blue-rgb), 0.5); // Cyber blue shadow
+    transform: translateY(-2px);
+    color: var(--color-white-signal); // Ensure text color remains readable on hover
+  }
+
+  // Inherits responsive behavior from .btnWaitsList, so width: auto on desktop should already apply
+  // If not, uncomment and adjust:
+  // @media (min-width: 640px) {
+  //   width: auto;
+  // }
+}
+
 .openingHook, .coreConcept {
   max-width: 800px; // Keep text from stretching too wide
   margin-left: auto;
   margin-right: auto;
+}
+
+// New button style for the Hero Demo Button, inspired by .litepaperButton
+.playDemoButton {
+  font-family: $font-family-accent;
+  color: $color-pink-girth; // Keep the pink for consistency with Manifesto button
+  background-color: rgba($color-black-void, 0.6); // Slightly more transparent for Hero context
+  font-size: 1.35rem; // Slightly larger for more prominence in Hero
+  text-decoration: none;
+  padding: 0.85rem 1.8rem; // Slightly larger padding
+  border: 2px solid $color-pink-girth;
+  border-radius: 5px;
+  box-shadow: 
+    0 0 6px $color-pink-girth,
+    0 0 12px $color-pink-girth,
+    0 0 18px rgba($color-cyber-blue-glow, 0.7), // Adjusted glow for hero context
+    inset 0 0 6px rgba(color.adjust($color-pink-girth, $lightness: 10%), 0.5);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px; // Slightly more letter spacing
+  display: inline-block; // To ensure it behaves like a button
+
+  &:hover,
+  &:focus {
+    color: $color-white-signal;
+    background-color: color.adjust($color-pink-girth, $lightness: -5%); // Darker pink on hover
+    border-color: $color-accent-neon-glow; // Keep consistent hover border
+    box-shadow: 
+      0 0 10px $color-accent-neon-glow,
+      0 0 20px $color-accent-neon-glow,
+      0 0 30px rgba($color-pink-girth-glow, 0.8), // Adjusted glow
+      inset 0 0 10px rgba(color.adjust($color-accent-neon-glow, $lightness: 10%), 0.6);
+    transform: translateY(-4px) scale(1.07); // Slightly more pronounced hover effect
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(-2px) scale(1.03); // Slightly more pronounced active effect
+    box-shadow: 
+      0 0 7px $color-accent-neon-glow,
+      0 0 14px $color-pink-girth-glow,
+      inset 0 0 7px rgba(color.adjust($color-accent-neon-glow, $lightness: 5%), 0.5);
+  }
 } 

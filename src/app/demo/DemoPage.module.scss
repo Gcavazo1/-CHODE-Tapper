@@ -1,0 +1,119 @@
+@use '@/styles/variables' as vars;
+@use '@/styles/mixins' as mixins;
+@use 'sass:color';
+
+.demoPageContainer {
+  padding: 20px;
+  text-align: center;
+  color: vars.$color-text-primary;
+  min-height: 100vh; // Ensure it takes at least full viewport height
+  background-color: vars.$color-background-dark; // Or your preferred page background
+}
+
+.header {
+  margin-bottom: 30px;
+  h1 {
+    font-family: vars.$font-family-headings; // Or GlitchSlap if preferred
+    color: vars.$color-accent-neon;
+    text-shadow: 0 0 8px vars.$color-accent-neon-glow, 0 0 15px vars.$color-accent-neon-glow;
+    font-size: 2.8rem;
+    margin-bottom: 0.5em;
+  }
+  p {
+    font-size: 1.2rem;
+    color: vars.$color-text-secondary;
+  }
+}
+
+.gameDemoWrapper {
+  /* Set exact dimensions to match Godot's 1280×720 resolution */
+  width: 100%;
+  max-width: 855px; // Exact width from Godot project
+  height: 720px;     // Exact height from Godot project
+  margin: 0 auto 30px auto; // Center the game wrapper and add margin below
+  border: 3px solid vars.$color-cyber-blue-glow;
+  box-shadow: 0 0 15px vars.$color-cyber-blue-glow, 0 0 25px vars.$color-pink-girth-glow;
+  position: relative; // For potential overlays or aspect ratio tricks if needed
+  background-color: #000; // Background for the iframe area
+  aspect-ratio: 16 / 9; // Maintain 16:9 aspect ratio (1280:720)
+}
+
+.gameIframe {
+  width: 100%;
+  height: 100%;
+  display: block; // Removes extra space below iframe
+  border: none;   // Remove default iframe border
+}
+
+.instructions {
+  margin-top: 30px;
+  background-color: color.adjust(vars.$color-background-dark, $lightness: -5%);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid vars.$color-blue-glitch;
+  max-width: 1280px; // Match game width
+  margin-left: auto;
+  margin-right: auto;
+  h2 {
+    color: vars.$color-pink-girth;
+    text-shadow: 0 0 5px vars.$color-pink-girth-glow;
+    margin-bottom: 10px;
+  }
+  p {
+    line-height: 1.6;
+  }
+}
+
+.tipText {
+  margin-top: 15px;
+  font-style: italic;
+  color: vars.$color-yellow-caution;
+  text-shadow: 0 0 3px vars.$color-yellow-caution-glow;
+  border-left: 3px solid vars.$color-yellow-caution;
+  padding-left: 10px;
+}
+
+.footerNote {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: vars.$color-text-secondary;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-style: italic;
+}
+
+// Responsive adjustments
+@media (max-width: 1300px) {
+  .gameDemoWrapper {
+    width: 95%; // Use slightly less than full width on medium screens
+    height: auto; // Let height be determined by aspect ratio
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .gameDemoWrapper {
+    width: 100%; // Use full available width on mobile
+    height: 0; // Set height to 0 because padding-top will define the height
+    padding-bottom: 56.25%; // 16:9 aspect ratio (9 / 16 = 0.5625 or 56.25%)
+  }
+  
+  .gameIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .instructions {
+    padding: 15px;
+    width: 95%;
+  }
+} 

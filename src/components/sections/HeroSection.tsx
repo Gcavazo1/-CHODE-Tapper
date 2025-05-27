@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from './HeroSection.module.scss';
 import gsap from 'gsap';
+import HeroDemoButton from '@/components/HeroDemoButton'; // Import the new button
 // import IconPlaceholder from '@/components/IconPlaceholder/IconPlaceholder'; // Assuming no icons needed directly in Hero for now
 
 const HeroSection: React.FC = () => {
@@ -88,8 +89,17 @@ const HeroSection: React.FC = () => {
       return;
     }
 
+    // Basic email validation (can be more complex if needed)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setMessage('Please enter a valid email address.');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      const response = await fetch('/api/waitlist', {
+      // Updated API endpoint
+      const response = await fetch('/api/supabase-waitlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -101,7 +111,9 @@ const HeroSection: React.FC = () => {
 
       if (response.ok) {
         setMessage(data.message || 'Successfully joined! Girthy updates incoming!');
-        setEmail(''); // Clear email field on success
+        if (response.status === 201) { // 201 Created indicates successful new entry
+          setEmail(''); // Clear email field on new successful submission
+        }
       } else {
         setMessage(data.message || 'Something went wrong. Please try again.');
       }
@@ -166,6 +178,7 @@ const HeroSection: React.FC = () => {
             <Image src="/svg_icons/twitter_X.svg" alt="Twitter X" className={styles.followIcon} width={24} height={24} /> 
             FOLLOW THE GIGACHODE (X/Twitter)
           </a>
+          <HeroDemoButton />
           <p className={styles.smallText}>The prophecy is unfolding. Don&apos;t get left behind.</p>
         </div>
       </div>

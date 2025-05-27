@@ -19,6 +19,7 @@ $color-text-secondary: rgba($color-white-signal, 0.7); // Slightly dimmer white 
 
 $color-cyber-blue: #00BFFF; // Deep Sky Blue - a good base for cyber blue
 $color-cyber-blue-glow: #00FFFF; // Aqua/Cyan - for the glow effect, matches existing $color-blue-glitch
+$color-cyber-blue-light: color.adjust($color-cyber-blue, $lightness: 10%); // Lighter version for hover
 
 $color-pink-girth-glow: #FF69B4; // Hot Pink - for a brighter glow
 

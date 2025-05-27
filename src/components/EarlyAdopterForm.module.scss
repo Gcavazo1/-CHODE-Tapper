@@ -1,0 +1,298 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+@use 'sass:color';
+
+.formContainer {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: color.adjust($color-background-dark, $lightness: -3%);
+  border: 2px solid $color-cyber-blue;
+  border-radius: 10px;
+  box-shadow: 0 0 15px $color-cyber-blue-glow, 0 0 25px $color-pink-girth-glow;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  // Optional: Add a grid/circuit pattern background
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, rgba($color-cyber-blue, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba($color-cyber-blue, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  // Optional: Add a slight glitch animation to the border
+  animation: borderGlitch 10s infinite alternate;
+  
+  @keyframes borderGlitch {
+    0% { border-color: $color-cyber-blue; }
+    25% { border-color: $color-pink-girth; }
+    50% { border-color: $color-green-slime; }
+    75% { border-color: $color-blue-glitch; }
+    100% { border-color: $color-cyber-blue; }
+  }
+}
+
+.formTitle {
+  color: $color-pink-girth;
+  font-family: $font-family-headings;
+  font-size: 2.2rem;
+  text-shadow: 0 0 5px $color-pink-girth-glow, 0 0 10px $color-pink-girth-glow;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.formSubtitle {
+  color: $color-cyber-blue;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 8px;
+  color: $color-text-secondary;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: rgba($color-background-dark, 0.7);
+  border: 1px solid $color-grey-subtle;
+  border-radius: 5px;
+  color: $color-text-primary;
+  font-family: $font-family-main;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: $color-cyber-blue;
+    box-shadow: 0 0 8px $color-cyber-blue-glow;
+  }
+  
+  &::placeholder {
+    color: rgba($color-text-secondary, 0.5);
+  }
+  
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+.submitButton {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: $color-cyber-blue;
+  border: none;
+  border-radius: 5px;
+  color: $color-white-signal;
+  font-family: $font-family-accent;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  // Optional: Add a shimmering effect
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      60deg,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0.1) 25%,
+      rgba(255, 255, 255, 0) 30%
+    );
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+  }
+  
+  &:hover {
+    background-color: $color-pink-girth;
+    box-shadow: 0 0 15px $color-pink-girth-glow;
+    transform: translateY(-2px);
+    
+    &::after {
+      transform: rotate(30deg) translate(100%, 100%);
+    }
+  }
+  
+  &:active {
+    transform: translateY(1px);
+  }
+  
+  &:disabled {
+    background-color: color.adjust($color-cyber-blue, $lightness: -10%);
+    cursor: not-allowed;
+    box-shadow: none;
+    
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+.successMessage {
+  background-color: rgba($color-green-slime, 0.2);
+  color: $color-green-slime;
+  border: 1px solid $color-green-slime;
+  text-shadow: 0 0 3px $color-green-slime-glow;
+}
+
+.errorMessage {
+  background-color: rgba($color-red-alert, 0.2);
+  color: $color-red-alert;
+  border: 1px solid $color-red-alert;
+  text-shadow: 0 0 3px $color-red-alert-glow;
+  
+  // Optional: Add a subtle glitch effect for errors
+  animation: fadeIn 0.5s ease-in-out, errorGlitch 0.5s infinite;
+  
+  @keyframes errorGlitch {
+    0% { text-shadow: 0 0 3px $color-red-alert-glow; }
+    25% { text-shadow: 2px 0 3px $color-red-alert-glow; }
+    50% { text-shadow: -2px 0 3px $color-red-alert-glow; }
+    75% { text-shadow: 0 -2px 3px $color-red-alert-glow; }
+    100% { text-shadow: 0 0 3px $color-red-alert-glow; }
+  }
+}
+
+// Styles for the Share Prompt section
+.sharePromptContainer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(color.adjust($color-background-dark, $lightness: -5%), 0.5); // Slightly different background
+  border: 1px dashed $color-cyber-blue; // Dashed border for a distinct look
+  border-radius: 8px;
+  animation: fadeIn 0.7s ease-in-out 0.3s backwards; // Delayed fadeIn
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.shareTitle {
+  color: $color-pink-girth; // Use the prominent pink for the title
+  font-family: $font-family-headings;
+  font-size: 1.6rem; // Slightly smaller than the main form title
+  text-shadow: 0 0 4px $color-pink-girth-glow;
+  margin-bottom: 10px;
+}
+
+.shareText {
+  color: $color-text-secondary;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.shareButton {
+  // Replicating button styles instead of using a potentially undefined mixin
+  padding: 12px 25px;
+  background-color: $color-green-slime; // A different color to stand out
+  color: $color-background-dark;
+  font-family: $font-family-accent; // Consistent with submitButton
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none; // Consistent with submitButton
+  border-radius: 5px; // Consistent with submitButton
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative; // For potential future pseudo-elements or effects
+  overflow: hidden;  // For potential future pseudo-elements or effects
+
+  &:hover {
+    background-color: color.adjust($color-green-slime, $lightness: 10%);
+    box-shadow: 0 0 12px rgba($color-green-slime, 0.7), 0 0 15px rgba($color-green-slime, 0.5); // Enhanced glow
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(1px); // Consistent with submitButton active state
+  }
+}
+
+.shareConfirmationMessage {
+  margin-top: 15px;
+  color: $color-cyber-blue;
+  font-size: 0.9rem;
+  font-style: italic;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px 15px;
+    margin: 30px 10px;
+  }
+  
+  .formTitle {
+    font-size: 1.8rem;
+  }
+  
+  .formSubtitle {
+    font-size: 1rem;
+  }
+  
+  .inputLabel {
+    font-size: 0.8rem;
+  }
+  
+  .input, .submitButton {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+} 
